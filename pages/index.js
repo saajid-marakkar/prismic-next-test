@@ -30,7 +30,7 @@ export default function Home({ images }) {
       </Head>
       <div className="">
             <div className=" text-center" style={{display:"flex", justifyContent:"center"}}>
-              <h1 >Vishnu Sagar Photography official</h1>
+              <h1 >Vishnu Sagar Photography</h1>
             </div>
           </div>
           <div >
