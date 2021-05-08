@@ -29,8 +29,8 @@ export default function Home({ images }) {
         <link rel="stylesheet" href="assets/css/style.css"/>
       </Head>
       <div className="">
-            <div className="logo text-center">
-              
+            <div className=" text-center" style={{display:"flex", justifyContent:"center"}}>
+              <h1 >Vishnu Sagar Photography</h1>
             </div>
           </div>
           <div >
