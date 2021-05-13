@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.gallery{
+   
+}
+
+.column-wise{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 2800px;
+    width: 1350px;
+    
+}
+.column-wise img{
+    width: 450px;
+    height: 100%;
+    margin: 3px;
+    
+}
