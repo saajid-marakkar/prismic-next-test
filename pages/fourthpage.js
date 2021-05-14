@@ -3,6 +3,8 @@ import Head from 'next/head'
 import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 export async function getStaticProps()
 {
   
@@ -35,6 +37,7 @@ function fourthpage({ image_links }) {
     const [flag,setFlag] = useState(3)
     const [width,setwidth] = useState(0)
     const [loading,setLoading] = useState(false)
+    const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
     useEffect(() => {
        
         var grid = document.querySelector('.grid');
@@ -84,7 +87,8 @@ function fourthpage({ image_links }) {
                     loading == false ? 
                     <div className="gallery-container" >
                         <div className="text-center">
-                            <h1>loading..</h1>
+                            <Spin indicator={antIcon} />
+                            <h3>loading..</h3>
                         </div>
                          <div className="grid">
                         
