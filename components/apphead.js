@@ -9,7 +9,7 @@ export default function apphead() {
                 </div>
                 <div className="nav text-center">
                     <Link href="/">home</Link>
-                    <Link href="fourthpage">main</Link>
+                    <Link href="/fourthpage">main</Link>
                 </div>
             </div>
         </div>
