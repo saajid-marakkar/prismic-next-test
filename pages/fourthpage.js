@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
-import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import Apphead from "../components/apphead"
+
 export async function getStaticProps()
 {
   
@@ -80,7 +79,6 @@ function fourthpage({ image_links }) {
         </Head>
         {console.log(loading)}
         <div className="gallery-container">
-                <Apphead />
                 {console.log(flag)}
                 {
                     loading == false ? 
