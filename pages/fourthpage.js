@@ -34,6 +34,7 @@ export async function getStaticProps()
 function fourthpage({ image_links }) {
     const [flag,setFlag] = useState(3)
     const [width,setwidth] = useState(0)
+    const [loading,setLoading] = useState(false)
     useEffect(() => {
        
         var grid = document.querySelector('.grid');
@@ -42,6 +43,9 @@ function fourthpage({ image_links }) {
         items: '.grid-item'
         });
         setwidth(window.screen.width)
+        setTimeout(() => {
+            setLoading(true)
+          }, 5000);
     } );
     useEffect(() => {   
         if(window.screen.width<768)
@@ -60,6 +64,7 @@ function fourthpage({ image_links }) {
     let inputStyle2 = {
         borderBottom: "7px solid white"
     };
+    
     return (
 
         <div>
@@ -69,40 +74,45 @@ function fourthpage({ image_links }) {
             <script type="text/javascript" src="assets/js/colcade2.js"></script>
             
         </Head>
+        {console.log(loading)}
         <div className="gallery-container">
-                <h1>My Photographs</h1>
-                {console.log(flag)}
-                <div className="grid">
-                    <div className="grid-col grid-col--1">
-
-                    </div>
-                    <div className="grid-col grid-col--2">
-
-                    </div>
-                    <div className="grid-col grid-col--3">
-
-                    </div>
-                    <div className="grid-col grid-col--4">
-
-                    </div>
-                    {image_links.map((image_url, index) => (
-                        
-                        <div className="grid-item" key={index}>
-                            
-                            <img src={image_url} classNameName="images" style={ flag == 2 && index % 2 ? inputStyle2 : inputStyle} />
-                        </div> 
-                    ))} 
-                    {/* {  for(i=0;image_links[i]!=null;i++){
-                        (<div className="grid-item" key={index}>
-                        <img src={image_url} classNameName="images" />
-                        </div>)
-                    }
-                        
-                        
-                     
-                    } */}
+                <div className="text-center">
+                    <img src="assets/images/BLACK.png" className="logo"></img>
                 </div>
-                
+                {console.log(flag)}
+                {
+                    loading == false ? 
+                    <div className="gallery-container" >
+                        <div className="text-center">
+                            <h1>loading..</h1>
+                        </div>
+                         <div className="grid">
+                        
+                        </div>
+                    </div>
+                    : 
+                    <div className="grid">
+                        <div className="grid-col grid-col--1">
+
+                        </div>
+                        <div className="grid-col grid-col--2">
+
+                        </div>
+                        <div className="grid-col grid-col--3">
+
+                        </div>
+                        <div className="grid-col grid-col--4">
+
+                        </div>
+                        {image_links.map((image_url, index) => (
+                            
+                            <div className="grid-item" key={index}>
+                                
+                                <img src={image_url} className="images" style={ flag == 2 && index % 2 ? inputStyle2 : inputStyle} />
+                            </div> 
+                        ))} 
+                    </div>
+                }
             </div>
             
         </div>
