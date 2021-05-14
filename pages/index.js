@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
 import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
@@ -71,12 +70,6 @@ function Home({ image_links }) {
     return (
 
         <div>
-        <Head>
-            <link rel="stylesheet" href="assets/css/fourthpage.css" />
-            
-            <script type="text/javascript" src="assets/js/colcade2.js"></script>
-            
-        </Head>
         {console.log(loading)}
         <div className="gallery-container">
                 {console.log(flag)}
