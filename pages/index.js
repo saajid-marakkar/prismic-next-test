@@ -8,7 +8,7 @@ export async function getStaticProps()
 {
   
   const images = await Client().query(
-    Prismic.Predicates.at("document.type","images")
+    Prismic.Predicates.at("document.type","home_page")
   );
     console.log("blog page",images.results)
 
@@ -47,7 +47,7 @@ function Home({ image_links }) {
         setwidth(window.screen.width)
         setTimeout(() => {
             setLoading(true)
-          }, 4070);
+          }, 700);
     } );
     useEffect(() => {   
         if(window.screen.width<768)
