@@ -45,7 +45,7 @@ function fourthpage({ image_links }) {
         setwidth(window.screen.width)
         setTimeout(() => {
             setLoading(true)
-          }, 5000);
+          }, 4070);
     } );
     useEffect(() => {   
         if(window.screen.width<768)
