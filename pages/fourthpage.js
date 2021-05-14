@@ -5,6 +5,7 @@ import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import Apphead from "../components/apphead"
 export async function getStaticProps()
 {
   
@@ -79,9 +80,7 @@ function fourthpage({ image_links }) {
         </Head>
         {console.log(loading)}
         <div className="gallery-container">
-                <div className="text-center">
-                    <img src="assets/images/BLACK.png" className="logo"></img>
-                </div>
+                <Apphead />
                 {console.log(flag)}
                 {
                     loading == false ? 
@@ -112,7 +111,7 @@ function fourthpage({ image_links }) {
                             
                             <div className="grid-item" key={index}>
                                 
-                                <img src={image_url} className="images" style={ flag == 2 && index % 2 ? inputStyle2 : inputStyle} />
+                                <img src={image_url} className="images" loading="lazy" style={ flag == 2 && index % 2 ? inputStyle2 : inputStyle} />
                             </div> 
                         ))} 
                     </div>
