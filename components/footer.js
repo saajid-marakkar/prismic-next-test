@@ -7,6 +7,7 @@ function footer() {
         <div>
         <Head>
             <link rel="stylesheet" href="assets/css/fourthpage.css" />
+            <link rel="stylesheet" href="assets/css/animation.css" />
             <script type="text/javascript" src="assets/js/colcade2.js"></script>
         </Head>
         <div>

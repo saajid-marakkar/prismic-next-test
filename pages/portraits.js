@@ -47,7 +47,7 @@ function portraits({ image_links }) {
         setwidth(window.screen.width)
         setTimeout(() => {
             setLoading(true)
-          }, 5000);
+          }, 1000);
     } );
     useEffect(() => {   
         if(window.screen.width<768)
