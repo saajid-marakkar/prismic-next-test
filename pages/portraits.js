@@ -77,7 +77,7 @@ function portraits({ image_links }) {
                             <img src="assets/images/portraits.jpg" />
                         </div>
                         <div className="loader-name">
-                            <div className="name">Portraits</div>
+                            <div className="name"><pre>P O R T R A I T S</pre></div>
                         </div>
                         <div className="grid">
 
