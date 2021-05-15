@@ -28,6 +28,7 @@ img {
     width:20%;
     height: 5%;
     margin-bottom: 10px !important;
+    margin-top: 10px !important;
 }
 .nav{
     
@@ -136,6 +137,7 @@ a{
         width:40%;
         height: 20%;
         margin-bottom: 10px !important;
+        margin-top: 10px !important;
     }
     .name{
         font-size: 50px !important;
