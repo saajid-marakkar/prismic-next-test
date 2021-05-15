@@ -69,13 +69,14 @@ a{
 
 }
 .footer{
-    position: fixed;
+    
     left: 0;
     bottom: 0;
 }
 .gallery-container {
     width: 95%;
     margin: 0 auto;
+    
 }
 
 .grid {

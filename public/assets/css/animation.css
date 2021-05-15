@@ -1,19 +1,18 @@
 .portraits-loader{
-    animation: transitionIn 0.75s; 
+    animation: riseAbove 0.75s; 
 }
-@keyframes transitionIn {
+@keyframes riseAbove {
     from{
-        opacity: 0;
-        transform: rotateX(-10deg);
+        transform: translateY(-10px)
     }
     to{
-        opacity: 1;
-        transform: rotateX(0);
+        transform: translateY(0px)
+        
     }
 }
 
 /* .loader-name{
-    animation: riseAbove 0.35s;
+    animation: transitionOut 0.35s;
 }
 @keyframes transitionOut {
     from{
@@ -26,14 +25,15 @@
 } */
 
 .grid{
-    animation: transitionIn 0.75s;
+    animation: transitionIn 0.65s;
 }
-@keyframes riseAbove {
+@keyframes transitionIn {
     from{
-        transform: translateY(-10px)
+        opacity: 0;
+        transform: rotateX(-10deg);
     }
     to{
-        transform: translateY(0px)
-        
+        opacity: 1;
+        transform: rotateX(0);
     }
 }

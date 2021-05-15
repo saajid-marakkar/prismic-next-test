@@ -68,50 +68,39 @@ function fourthpage({ image_links }) {
     };
     
     return (
-
-        <div>
-        {console.log(loading)}
-        <div className="gallery-container">
-                {console.log(flag)}
-                {
-                    loading == false ? 
-                    <div className="gallery-container" >
-                        <div className="text-center">
-                            <Spin indicator={antIcon} />
-                            <h3>loading..</h3>
-                        </div>
-                         <div className="grid">
-                        
-                        </div>
-                    </div>
-                    : 
-                    <div className="grid">
-                        <div className="grid-col grid-col--1">
-
-                        </div>
-                        <div className="grid-col grid-col--2">
-
-                        </div>
-                        <div className="grid-col grid-col--3">
-
-                        </div>
-                        <div className="grid-col grid-col--4">
-
-                        </div>
-                        {image_links.map((image_url, index) => (
+            <div>
+                <div className="gallery-container">
+                    {
+                        loading == false ? 
+                        <div className="gallery-container" >
+                            <div className="text-center">
+                                <Spin indicator={antIcon} />
+                                <h3>loading..</h3>
+                            </div>
+                            <div className="grid">
                             
-                            <div className="grid-item" key={index}>
-                                
-                                <img src={image_url} className="images" loading="lazy" style={ flag == 2 && index % 2 ? inputStyle2 : inputStyle} />
-                            </div> 
-                        ))} 
-                    </div>
-                }
+                            </div>
+                        </div>
+                        : 
+                        <div className="grid">
+                            <div className="grid-col grid-col--1">
+                            </div>
+                            <div className="grid-col grid-col--2">
+                            </div>
+                            <div className="grid-col grid-col--3">
+                            </div>
+                            <div className="grid-col grid-col--4">
+                            </div>
+                            {image_links.map((image_url, index) => (
+                                <div className="grid-item" key={index}>
+                                    <img src={image_url} className="images" loading="lazy" style={ flag == 2 && index % 2 ? inputStyle2 : inputStyle} />
+                                </div> 
+                            ))} 
+                        </div>
+                    }
+                </div>
             </div>
-            
-        </div>
-        
-    )
+        )
 }
 
 export default fourthpage
