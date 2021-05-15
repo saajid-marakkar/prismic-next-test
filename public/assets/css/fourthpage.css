@@ -65,13 +65,13 @@ a{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 80%;
+    width: 90%;
     padding: 20px;
     margin-top: 10%;
     text-align: center;
 }
 .name{
-    font-size: 90px !important;
+    font-size: 100px !important;
     
 
 }
@@ -116,6 +116,9 @@ a{
         transition: all 2s;
         will-change: opacity, transform;
     }
+    .name{
+        font-size: 55px !important;
+    }
 }
 @media (max-width: 767px) 
 {
@@ -141,6 +144,9 @@ a{
         margin-top: 10px !important;
     }
     .name{
-        font-size: 35px !important;
+        font-size: 33px !important;
+    }
+    .loader-name{
+        width: 97%
     }
 }
