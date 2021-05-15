@@ -8,11 +8,11 @@ export async function getStaticProps()
 {
   
   const images = await Client().query(
-    Prismic.Predicates.at("document.type","home_page")
+    Prismic.Predicates.at("document.type","portraits")
   );
     console.log("blog page",images.results)
 
-    console.log("blog page",images.results[0].data.images_group[0].image.url)
+    
     let image_links = [];
     {images.results.map((image, index) => (
                   
@@ -32,7 +32,7 @@ export async function getStaticProps()
   };
 }
 
-function Home({ image_links }) {
+function portraits({ image_links }) {
     const [flag,setFlag] = useState(3)
     const [width,setwidth] = useState(0)
     const [loading,setLoading] = useState(false)
@@ -47,7 +47,7 @@ function Home({ image_links }) {
         setwidth(window.screen.width)
         setTimeout(() => {
             setLoading(true)
-          }, 1000);
+          }, 5000);
     } );
     useEffect(() => {   
         if(window.screen.width<768)
@@ -68,50 +68,42 @@ function Home({ image_links }) {
     };
     
     return (
-
         <div>
-        {console.log(loading)}
-        <div className="gallery-container">
-                {console.log(flag)}
-                {
-                    loading == false ? 
-                    <div className="gallery-container" >
-                        <div className="text-center">
-                            <Spin indicator={antIcon} />
-                            <h3>loading..</h3>
-                        </div>
-                         <div className="grid">
-                        
-                        </div>
+            {
+                loading == false ? 
+                <div className="gallery-container" >
+                    <div className="portraits-loader">
+                        <img src="assets/images/portraits.jpg" />
                     </div>
-                    : 
+                    <div className="loader-name">
+                        <div className="name">Portraits</div>
+                    </div>
+                    <div className="grid">
+                    </div>
+                </div>
+                : 
+                <div className="gallery-container">
                     <div className="grid">
                         <div className="grid-col grid-col--1">
-
                         </div>
                         <div className="grid-col grid-col--2">
-
                         </div>
                         <div className="grid-col grid-col--3">
-
                         </div>
                         <div className="grid-col grid-col--4">
-
                         </div>
                         {image_links.map((image_url, index) => (
-                            
                             <div className="grid-item" key={index}>
-                                
                                 <img src={image_url} className="images"  style={ flag == 2 && index % 2 ? inputStyle2 : inputStyle} />
                             </div> 
                         ))} 
                     </div>
+                </div>
                 }
-            </div>
-            
         </div>
         
     )
 }
 
-export default Home
+export default portraits
+
