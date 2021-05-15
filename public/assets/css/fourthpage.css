@@ -22,7 +22,7 @@ img {
     width:30%;
     height: 10%;
     margin-top: 40px !important;
-    box-shadow: 0 10px 10px -5px #9a9a9f;
+    
 }
 .nav{
     
@@ -67,6 +67,11 @@ a{
     font-size: 150px !important;
     transition: all 300ms ease-in-out;
 
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 .gallery-container {
     width: 95%;

@@ -11,7 +11,7 @@ function footer() {
             <script type="text/javascript" src="assets/js/colcade2.js"></script>
         </Head>
         <div>
-            <div className="text-center">
+            <div className="text-center footer">
                 <img src="assets/images/BLACK.png" className="logo"></img>
             </div>
         </div>
