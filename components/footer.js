@@ -12,7 +12,7 @@ function footer() {
         </Head>
         <div>
             <div className="text-center footer">
-                <img src="assets/images/BLACK.png" className="logo"></img>
+                <img src="assets/images/sign.png" className="sign"></img>
             </div>
         </div>
     </div>

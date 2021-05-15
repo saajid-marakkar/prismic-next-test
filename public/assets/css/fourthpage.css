@@ -24,6 +24,11 @@ img {
     margin-top: 40px !important;
     
 }
+.sign{
+    width:20%;
+    height: 5%;
+    margin-bottom: 10px !important;
+}
 .nav{
     
     display: flex;
@@ -126,6 +131,11 @@ a{
     .logo{
         width:50%;
         height: 30%;
+    }
+    .sign{
+        width:40%;
+        height: 20%;
+        margin-bottom: 10px !important;
     }
     .name{
         font-size: 50px !important;
