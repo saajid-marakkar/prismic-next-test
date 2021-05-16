@@ -3,7 +3,7 @@ import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-
+import Head from 'next/head' 
 export async function getStaticProps()
 {
   
@@ -103,6 +103,7 @@ function portraits({ image_links }) {
                     </div>
                     }
             </div>
+            
         </div>
         
     )
