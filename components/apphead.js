@@ -4,10 +4,6 @@ import Head from 'next/head'
 export default function apphead() {
     return (
         <div>
-            <Head>
-                <link rel="stylesheet" href="assets/css/fourthpage.css" />
-                <link rel="stylesheet" href="assets/css/animation.css" />
-            </Head>
             <div>
                 <div className="text-center">
                     <img src="assets/images/BLACK.png" className="logo"></img>

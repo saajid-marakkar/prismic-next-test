@@ -5,9 +5,6 @@ import Link from 'next/link'
 function footer() {
     return (
         <div>
-        <Head>
-            <script type="text/javascript" src="assets/js/colcade2.js"></script>
-        </Head>
         <div>
             <div className="text-center footer">
                 <img src="assets/images/sign.png" className="sign"></img>
