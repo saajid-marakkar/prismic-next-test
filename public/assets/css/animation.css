@@ -1,5 +1,5 @@
 .portraits-loader{
-    animation: riseAbove 0.75s; 
+    animation: riseAbove 1.40s; 
 }
 @keyframes riseAbove {
     from{

@@ -47,7 +47,7 @@ function portraits({ image_links }) {
         setwidth(window.screen.width)
         setTimeout(() => {
             setLoading(true)
-          }, 1000);
+          }, 1400);
     } );
     useEffect(() => {   
         if(window.screen.width<768)
@@ -66,7 +66,9 @@ function portraits({ image_links }) {
     let inputStyle2 = {
         borderBottom: "7px solid white"
     };
-    
+    const funct = () =>{
+
+    }
     return (
         <div>
             <div className="gallery-container">
@@ -74,7 +76,7 @@ function portraits({ image_links }) {
                     loading == false ? 
                     <div >
                         <div className="portraits-loader">
-                            <img src="assets/images/portraits.jpg" />
+                            <img src="assets/images/portraits.jpg" onClick={funct()} />
                         </div>
                         <div className="loader-name">
                             <div className="name"><pre>P O R T R A I T S</pre></div>

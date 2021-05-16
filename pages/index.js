@@ -36,6 +36,7 @@ function Home({ image_links }) {
     const [flag,setFlag] = useState(3)
     const [width,setwidth] = useState(0)
     const [loading,setLoading] = useState(false)
+    const [display,setDisplay] = useState("none")
     const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
     useEffect(() => {
        
@@ -48,6 +49,9 @@ function Home({ image_links }) {
         setTimeout(() => {
             setLoading(true)
           }, 1000);
+          setTimeout(() => {
+            setDisplay("flex")
+          }, 2000);
     } );
     useEffect(() => {   
         if(window.screen.width<768)
@@ -85,7 +89,7 @@ function Home({ image_links }) {
                         </div>
                     </div>
                     : 
-                    <div className="grid">
+                    <div className="grid" style={{display:display}}>
                         <div className="grid-col grid-col--1">
 
                         </div>
