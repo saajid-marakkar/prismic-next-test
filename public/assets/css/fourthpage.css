@@ -1,11 +1,16 @@
 *{
     margin: 0;
-    /* font-family: 'Montserrat'; */
-    font-family: 'futura-pt';
+    font-family: 'Montserrat';
+    /* font-family: 'futura-pt'; */
 }
-
+/* @font-face {
+    font-family: 'American Captain';
+    src: url('http://www.fontsaddict.com/fontface/american-captain.ttf');
+} */
 img {
     width: 100%;
+    /* object-fit: cover; */
+    transition: all 0.3s ease-out;
     /* -webkit-transition: opacity 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   -moz-transition: opacity 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: opacity 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -20,8 +25,9 @@ img {
 
 }
 img:hover{
-    opacity: 75%;
+    /* opacity: 75%; */
     /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    transform: scale(.98);
     cursor: pointer;
 }
 .logo{
@@ -88,6 +94,7 @@ a{
 .gallery-container {
     width: 95%;
     margin: 0 auto;
+    margin-top: 30px;
     
 }
 
@@ -98,10 +105,12 @@ a{
 .grid-col {
     flex: 1;
     /* padding: 0 .1em; */
+    /* overflow: hidden; */
 }
 
 .grid-col--2, .grid-col--3 {
     display: none;
+    /* overflow: hidden; */
 }
 
 @media (min-width: 768px) {
@@ -124,11 +133,13 @@ a{
     .name{
         font-size: 55px !important;
     }
+   
 }
 @media (max-width: 767px) 
 {
     .gallery-container { 
         width: 100% !important;
+        margin-top: 10px;
         /* margin-left: -6px;
         margin-right: -12px !important; */
     }

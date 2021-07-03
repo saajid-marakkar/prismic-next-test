@@ -10,8 +10,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <link rel="stylesheet" href="assets/css/fourthpage.css" />
-            <link rel="stylesheet" href="assets/css/animation.css" />
+            {/* <link rel="stylesheet" href="assets/css/fourthpage.css" />
+            <link rel="stylesheet" href="assets/css/animation.css" /> */}
             <script type="text/javascript" src="assets/js/colcade2.js"></script>
         </Head>
         <body>

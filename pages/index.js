@@ -64,11 +64,11 @@ function Home({ image_links }) {
     },[width]);
     
     let inputStyle = {
-        borderRight: "7px solid white",
-        borderBottom: "7px solid white"
+        borderRight: "8px solid white",
+        borderBottom: "8px solid white"
     };
     let inputStyle2 = {
-        borderBottom: "7px solid white"
+        borderBottom: "8px solid white"
     };
     
     return (
