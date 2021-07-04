@@ -52,9 +52,9 @@ export default function apphead() {
                     </div>
                 </div> */}
             </div>
-            <div class="mobile-header">
+            <div class="mobile-header sticky-top ">
                 <div class="logo-container">
-                    <img src="assets/images/BLACK.png" className= "mobile-logo" />
+                    <Link href="/"><img src="assets/images/BLACK.png" className= "mobile-logo" /></Link>
                 </div>
                 <div class="menu-button">
                     <input type="checkbox" id="burger-toggle" />
@@ -63,23 +63,19 @@ export default function apphead() {
                         <div class="line"></div>
                         <div class="line"></div>
                     </label>
-                    <div class="menu">
+                    <div class="menu sticky-top">
                         <div class="menu-inner">
                             <ul class="menu-nav">
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
+                                <li class="menu-nav-item"><a class="menu-nav-link" href="/"><span>
                                     <div>Home</div>
                                 </span></a></li>
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-                                    <div>Profile/account</div>
+                                <li class="menu-nav-item"><a class="menu-nav-link" href="/portraits"><span>
+                                    <div>Portraits</div>
                                 </span></a></li>
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-                                    <div>Profile/account</div>
-                                </span></a></li>
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-                                    <div>Profile/account</div>
-                                </span></a></li>
-                         
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
+                                <li class="menu-nav-item"><a class="menu-nav-link" href="/fourthpage"><span>
+                                    <div>Gallery</div>
+                                </span></a></li>                        
+                                <li class="menu-nav-item"><a class="menu-nav-link" href="/contact"><span>
                                     <div>Contact</div>
                                 </span></a></li>
                             </ul>
