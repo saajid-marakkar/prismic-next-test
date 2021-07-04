@@ -1,10 +1,11 @@
 .navbar {
     /* border: 2px solid black; */
-    width: 40%;
+    width: 60%;
     height: 22px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    opacity: 85%;
 }
 .header {
     margin-top: 7px;
@@ -35,6 +36,21 @@
     width: auto;
     margin: auto;
     justify-content: center;
+}
+.social-icons{
+    height: 25px;
+    width: 25%;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    opacity: 50%;
+    /* box-shadow: 0px 1px 5px #afaeae; */
+    justify-content: center;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+.social-item {
+    height: 10px;
+    width: auto;
 }
 .menu-button {
     margin-right: 18px;
@@ -226,6 +242,10 @@
 @media only screen and (max-width: 766px) {
     .header {
         display: none;
+
+    }
+    .social-icons{
+        width: 15%;
     }
 }
 @media only screen and (min-width: 767px) {
@@ -259,8 +279,4 @@
     justify-content: center;
 
 }
-.social-item {
-    height: 10px;
-    width: auto;
 
-}

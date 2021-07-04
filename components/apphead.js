@@ -4,84 +4,109 @@ import Head from 'next/head'
 export default function apphead() {
     return (
         <div>
-            {/* <div>
-                <div className="text-center">
-                    <img src="assets/images/BLACK.png" className="logo"></img>
+            <div className="header">
+                <div className="logo">
+                    <Link href="/" ><img src="assets/images/BLACK.png" className="main-page-logo"></img></Link>
                 </div>
-                <div className="nav text-center">
-                    <Link href="/">Home</Link>
-                    <Link href="/portraits">PORTRAITS</Link>
-                    <Link href="/fourthpage">main</Link>
-                </div>
-            </div> */}
-            <div class="header">
-                <div class="logo">
-                    <img src="assets/images/BLACK.png" class="main-page-logo"></img>
-                </div>
-                <div class="navbar">
-                    <Link class="nav-item" href="/">
+                <div className="navbar">
+                    <Link className="nav-item" href="/">
                         Home
                     </Link>
-                    <Link class="nav-item" href="/portraits">
+                    <Link className="nav-item" href="/portraits">
                         Portraits
                     </Link>
-                    <Link class="nav-item" href="/fourthpage">
-                        Gallery
+                    <Link className="nav-item" href="/fourthpage">
+                        Landscape
                     </Link>
-                    <Link class="nav-item" href="/fourthpage">
-                        Contact
+                    <Link className="nav-item" href="/automotive">
+                        Automotive
+                    </Link>
+                    <Link className="nav-item" href="/commercial">
+                        Commercial
+                    </Link>
+                    <Link className="nav-item" href="/about">
+                        About
+                    </Link>
+                    <Link className="nav-item" href="/contact-me">
+                        Contact Me
                     </Link>
                 </div>
-                {/* <div class="social">
-                    <div class="social-item">
-                        <a href="http://twitter.com/adambirdyy" target="_blank" class="social-item-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -150 1000 1000" class="social-icon">
-                                <path fill="currentColor"
-                                    d="M904 228q-37 54-90 93v23q0 73-21 145t-64 139-103 117-144 82-181 30q-151 0-276-81 19 3 43 3 126 0 224-77-59-2-105-36t-64-89q19 2 34 2 24 0 48-6-63-13-104-62T60 396v-2q38 21 82 23-37-25-59-64t-22-86q0-49 25-91 68 83 164 133t208 55q-5-21-5-41 0-75 53-127t127-53q79 0 132 57 61-12 114-44-20 64-79 100 52-6 104-28z">
-                                </path>
-                            </svg>
+                <div className="social-icons">
+                    <div>
+                        <a className="btn" href="http://www.facebook.com/profile.php?id=" ><i
+                            className="fa fa-facebook fa-sm"></i>
                         </a>
-                        <ul class="list-unstyled list-inline social text-center">
-                            <a class="btn" href="http://www.facebook.com/profile.php?id=" style="color: whitesmoke;"><span
-                                class="fa fa-facebook fa-sm"></span></a>
-                            <a class="btn" href="https://instagram.com/laxer_education_?igshid=1gfor2s28e6cw"
-                                style="color: whitesmoke;"><span class="fa fa-instagram fa-sm"></span></a>
-                            <a class="btn" href="http://youtube.com/" style="color: whitesmoke;"><span
-                                class="fa fa-youtube fa-sm"></span></a>
-                        </ul>
                     </div>
-                </div> */}
-            </div>
-            <div class="mobile-header sticky-top ">
-                <div class="logo-container">
-                    <Link href="/"><img src="assets/images/BLACK.png" className= "mobile-logo" /></Link>
+                    <div>
+                        <a className="btn" href="http://www.facebook.com/profile.php?id=" ><i
+                            className="fa fa-twitter fa-sm"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a className="btn" href="https://www.instagram.com/mevishnusagar/" ><i
+                            className="fa fa-instagram fa-sm"></i>
+                        </a>
+                    </div>  
                 </div>
-                <div class="menu-button">
+            </div>
+            <div className="mobile-header sticky-top ">
+                <div className="logo-container">
+                    <Link href="/"><img src="assets/images/BLACK.png" className="mobile-logo" /></Link>
+                </div>
+                <div className="menu-button">
                     <input type="checkbox" id="burger-toggle" />
-                    <label for="burger-toggle" class="burger-menu">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+                    <label htmlFor="burger-toggle" className="burger-menu">
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
                     </label>
-                    <div class="menu ">
-                        <div class="menu-inner">
-                            <ul class="menu-nav">
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="/"><span>
+                    <div className="menu ">
+                        <div className="menu-inner">
+                            <ul className="menu-nav">
+                                <li className="menu-nav-item"><a className="menu-nav-link" href="/"><span>
                                     <div>Home</div>
                                 </span></a></li>
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="/portraits"><span>
+                                <li className="menu-nav-item"><a className="menu-nav-link" href="/portraits"><span>
                                     <div>Portraits</div>
                                 </span></a></li>
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="/fourthpage"><span>
-                                    <div>Gallery</div>
-                                </span></a></li>                        
-                                <li class="menu-nav-item"><a class="menu-nav-link" href="/contact"><span>
-                                    <div>Contact</div>
+                                <li className="menu-nav-item"><a className="menu-nav-link" href="/fourthpage"><span>
+                                    <div>Landscape</div>
                                 </span></a></li>
+                                <li className="menu-nav-item"><a className="menu-nav-link" href="/automotive"><span>
+                                    <div>Automotive</div>
+                                </span></a></li>
+                                <li className="menu-nav-item"><a className="menu-nav-link" href="/commercial"><span>
+                                    <div>Commercial</div>
+                                </span></a></li>
+                                <li className="menu-nav-item"><a className="menu-nav-link" href="/about"><span>
+                                    <div>About</div>
+                                </span></a></li>
+                                <li className="menu-nav-item"><a className="menu-nav-link" href="/contact-me"><span>
+                                    <div>Contact Me</div>
+                                </span></a></li>
+                                <li>
+                                    <div className="social-icons">
+                                        <div>
+                                            <a className="btn" href="http://www.facebook.com/profile.php?id=" ><i
+                                                className="fa fa-facebook fa-sm"></i>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a className="btn" href="http://www.facebook.com/profile.php?id=" ><i
+                                                className="fa fa-twitter fa-sm"></i>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a className="btn" href="http://www.facebook.com/profile.php?id=" ><i
+                                                className="fa fa-instagram fa-sm"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                         <div id="sgr-logo">
-                            <img src="assets/images/sign.png" class="sign" />
+                            <img src="assets/images/sign.png" className="sign" />
                         </div>
                     </div>
                 </div>
