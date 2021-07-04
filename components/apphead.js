@@ -63,7 +63,7 @@ export default function apphead() {
                         <div class="line"></div>
                         <div class="line"></div>
                     </label>
-                    <div class="menu sticky-top">
+                    <div class="menu ">
                         <div class="menu-inner">
                             <ul class="menu-nav">
                                 <li class="menu-nav-item"><a class="menu-nav-link" href="/"><span>
