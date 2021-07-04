@@ -6,7 +6,7 @@ export default function apphead() {
         <div>
             <div className="header">
                 <div className="logo">
-                    <Link href="/" ><img src="assets/images/BLACK.png" className="main-page-logo"></img></Link>
+                    <Link href="/" ><img src="assets/images/black-height-updated.png" className="main-page-logo"></img></Link>
                 </div>
                 <div className="navbar">
                     <Link className="nav-item" href="/">
@@ -51,7 +51,7 @@ export default function apphead() {
             </div>
             <div className="mobile-header sticky-top ">
                 <div className="logo-container">
-                    <Link href="/"><img src="assets/images/BLACK.png" className="mobile-logo" /></Link>
+                    <Link href="/"><img src="assets/images/black-height-updated.png" className="mobile-logo" /></Link>
                 </div>
                 <div className="menu-button">
                     <input type="checkbox" id="burger-toggle" />

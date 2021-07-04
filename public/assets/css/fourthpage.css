@@ -24,7 +24,7 @@ img {
     
 
 }
-img:hover{
+.grid-item img:hover{
     /* opacity: 75%; */
     /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
     transform: scale(.98);
@@ -113,6 +113,7 @@ a{
     /* overflow: hidden; */
 }
 
+
 @media (min-width: 768px) {
     .gallery-container { 
         width: 93%;
@@ -133,6 +134,8 @@ a{
     .name{
         font-size: 55px !important;
     }
+  
+
    
 }
 @media (max-width: 767px) 
@@ -165,4 +168,38 @@ a{
     .loader-name{
         width: 97%
     }
+    .full-img{
+        height: auto !important;
+        width: 80% !important;
+      
+    }
+   
+
+}
+.modalp {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+}
+.modalp.open {
+    opacity: 1;
+    pointer-events: all;
+}
+.full-img{
+    position: absolute;
+    height: 90%;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    transition: all 0.25s ease-out;
+}
+.full-img.open {
+    transform: translate(-50%, -50%) scale(1);
 }
