@@ -24,7 +24,7 @@ export async function getStaticProps() {
             )))
         ))
     }
-    console.log("image url", image_links[1])
+    
 
     return {
         props: {
@@ -42,6 +42,7 @@ function Home({ image_links }) {
     const [display, setDisplay] = useState("none")
     const [open, setOpen] = useState("")
     const [imagesrc, setImagesrc] = useState(" ")
+    const [imagelinks, setImagelinks] = useState([])
     const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
     useEffect(() => {
 
@@ -50,6 +51,7 @@ function Home({ image_links }) {
             columns: '.grid-col',
             items: '.grid-item'
         });
+        setImagelinks(image_links)
         setwidth(window.screen.width)
         setTimeout(() => {
             setLoading(true)
@@ -85,19 +87,36 @@ function Home({ image_links }) {
             }
         })
     }
-    const closeDisplayImage = (e) => {
-        // const modalp = document.querySelector(".modalp");
-        // if (e.target.classList.contain("modalp")) {
-        //     modalp.classList.remove("open");
-        // }
+    const nextImage = () => {
+        let size = imagelinks.length
+        let index = imagelinks.findIndex(img => img == imagesrc);
+        if (index == size - 1) {
+            index = 0;
+        }
+        else {
+            index++
+        }
+        let nextImage = imagelinks[index]
+        setImagesrc(nextImage)
+    }
+    const prevImage = () => {
+        let size = imagelinks.length
+        let index = imagelinks.findIndex(img => img == imagesrc);
+        if (index == 0) {
+            index = size - 1;
+        }
+        else {
+            index--
+        }
+        let nextImage = imagelinks[index]
+        setImagesrc(nextImage)
     }
 
     return (
 
         <div>
-            {console.log(loading)}
             <div className="gallery-container">
-                {console.log(flag)}
+
                 {
                     loading == false ?
                         <div className="gallery-container" >
@@ -133,8 +152,24 @@ function Home({ image_links }) {
                         </div>
                 }
             </div>
-            <div className="modalp"  >
-                <img src={imagesrc} className="full-img" />
+            <div className="modalp">
+                <div className="preview-container">
+                    <div className="right" onClick={() => nextImage()}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className ="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <img src={imagesrc} className="full-img" />
+                    </div>
+                    <div className="left" onClick={() => prevImage()}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className ="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+
             </div>
 
 

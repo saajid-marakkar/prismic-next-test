@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     /* font-family: 'futura-pt'; */
 }
 /* @font-face {
@@ -95,6 +95,7 @@ a{
     width: 95%;
     margin: 0 auto;
     margin-top: 30px;
+    /* z-index: 1; */
     
 }
 
@@ -166,12 +167,28 @@ a{
         font-size: 33px !important;
     }
     .loader-name{
-        width: 97%
+        width: 97%;
     }
     .full-img{
         height: auto !important;
         width: 80% !important;
       
+    }
+    .right{
+        float: right !important;
+        color: aliceblue;
+        margin-right: 1% !important;
+        cursor: pointer;
+        margin-top: 87% !important;
+        
+        
+    }
+    .left{
+        float:left !important;
+        margin-left: 1% !important;
+        color: aliceblue;
+        cursor: pointer;
+        margin-top: 87% !important;
     }
    
 
@@ -202,4 +219,23 @@ a{
 }
 .full-img.open {
     transform: translate(-50%, -50%) scale(1);
+}
+.preview-container{
+    
+}
+.right{
+    float: right;
+    color: aliceblue;
+    margin-right: 10%;
+    cursor: pointer;
+    margin-top: 22%;
+    
+    
+}
+.left{
+    float:left;
+    margin-left: 10%;
+    color: aliceblue;
+    cursor: pointer;
+    margin-top: 22%;
 }
