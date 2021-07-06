@@ -92,6 +92,8 @@ function Home({ image_links }) {
         })
     }
     const nextImage = () => {
+        setStartingX(0)
+        console.log(startingX)
         let size = imagelinks.length
         let index = imagelinks.findIndex(img => img == imagesrc);
         if (index == size - 1) {
@@ -104,6 +106,8 @@ function Home({ image_links }) {
         setImagesrc(nextImage)
     }
     const prevImage = () => {
+        setStartingX(0)
+        console.log(startingX)
         let size = imagelinks.length
         let index = imagelinks.findIndex(img => img == imagesrc);
         if (index == 0) {
@@ -116,25 +120,31 @@ function Home({ image_links }) {
         setImagesrc(nextImage)
     }
     const touchStart = (event) => {
-        var x = event.touches[0].clientX
-        setStartingX(x)
-        var y = event.touches[0].clientY
-        setStartingY(y)
+        setStartingX(0)
+        var startx = event.touches[0].clientX
+        setStartingX(startx)
+        console.log(startingX)
+        var starty = event.touches[0].clientY
+        setStartingY(starty)
     }
     const touchMove = (event) => {
-        var x = event.touches[0].clientX
-        setMovingX(x)
-        var y = event.touches[0].clientY
-        setMovingY(y)
+        var movex = event.touches[0].clientX
+        setMovingX(movex)
+        console.log(startingX)
+        var movey = event.touches[0].clientY
+        setMovingY(movey)
     }
     const touchEnd = () => {
         if (startingX+100 < movingX){
             console.log("right")
-            nextImage()
+            console.log(startingX)
+            prevImage()
         }
         else if (startingX-100 > movingX){
             console.log("left")
-            prevImage()
+            console.log(startingX)
+            nextImage()
+            
         }
     }
 
