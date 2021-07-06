@@ -43,6 +43,10 @@ function Home({ image_links }) {
     const [open, setOpen] = useState("")
     const [imagesrc, setImagesrc] = useState(" ")
     const [imagelinks, setImagelinks] = useState([])
+    const [startingX, setStartingX] = useState();
+    const [startingY, setStartingY] = useState();
+    const [movingX, setMovingX] = useState();
+    const [movingY, setMovingY] = useState();
     const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
     useEffect(() => {
 
@@ -111,6 +115,28 @@ function Home({ image_links }) {
         let nextImage = imagelinks[index]
         setImagesrc(nextImage)
     }
+    const touchStart = (event) => {
+        var x = event.touches[0].clientX
+        setStartingX(x)
+        var y = event.touches[0].clientY
+        setStartingY(y)
+    }
+    const touchMove = (event) => {
+        var x = event.touches[0].clientX
+        setMovingX(x)
+        var y = event.touches[0].clientY
+        setMovingY(y)
+    }
+    const touchEnd = () => {
+        if (startingX+100 < movingX){
+            console.log("right")
+            nextImage()
+        }
+        else if (startingX-100 > movingX){
+            console.log("left")
+            prevImage()
+        }
+    }
 
     return (
 
@@ -160,7 +186,7 @@ function Home({ image_links }) {
                         </svg>
                     </div>
                     <div>
-                        <img src={imagesrc} className="full-img" />
+                        <img src={imagesrc} className="full-img" onTouchStart = {() => touchStart(event)} onTouchMove={() => touchMove(event)} onTouchEnd={() => touchEnd()} />
                     </div>
                     <div className="left" onClick={() => prevImage()}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className ="bi bi-chevron-left" viewBox="0 0 16 16">

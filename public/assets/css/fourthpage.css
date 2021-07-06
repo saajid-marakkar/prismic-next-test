@@ -175,20 +175,22 @@ a{
       
     }
     .right{
-        float: right !important;
+        /* float: right !important;
         color: aliceblue;
         margin-right: 1% !important;
         cursor: pointer;
-        margin-top: 87% !important;
+        margin-top: 87% !important; */
+        display: none;
         
         
     }
     .left{
-        float:left !important;
+        /* float:left !important;
         margin-left: 1% !important;
         color: aliceblue;
         cursor: pointer;
-        margin-top: 87% !important;
+        margin-top: 87% !important; */
+        display: none;
     }
    
 
