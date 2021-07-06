@@ -136,12 +136,12 @@ function Home({ image_links }) {
         setMovingY(movey)
     }
     const touchEnd = () => {
-        if (startingX+50 < movingX){
+        if (startingX+30 < movingX){
             console.log("right")
             console.log(startingX)
             prevImage()
         }
-        else if (startingX-50 > movingX){
+        else if (startingX-30 > movingX){
             console.log("left")
             console.log(startingX)
             nextImage()
