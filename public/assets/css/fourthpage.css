@@ -68,6 +68,14 @@ a{
     margin: 0px !important;
 
 }
+.loader-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px -5px #9a9a9f;
+    height: 570px;
+}
 .loader-name{
     color: white;
     font-weight: bold;

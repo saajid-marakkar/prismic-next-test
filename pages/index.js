@@ -47,7 +47,7 @@ function Home({ image_links }) {
     const [startingY, setStartingY] = useState();
     const [movingX, setMovingX] = useState();
     const [movingY, setMovingY] = useState();
-    const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+    const antIcon = <LoadingOutlined style={{ fontSize: 26 }} spin />;
     useEffect(() => {
 
         var grid = document.querySelector('.grid');
@@ -157,9 +157,13 @@ function Home({ image_links }) {
                 {
                     loading == false ?
                         <div className="gallery-container" >
-                            <div className="text-center">
-                                <Spin indicator={antIcon} />
-                                <h3>loading..</h3>
+                            <div className="text-center loader-container">
+                                <div>
+                                    <Spin indicator={antIcon} />
+                                </div>
+                                <div>
+                                    <h2>loading..</h2>
+                                </div>
                             </div>
                             <div className="grid">
 
