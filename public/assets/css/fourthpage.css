@@ -73,8 +73,8 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 10px -5px #9a9a9f;
-    height: 545px;
+    box-shadow: 0 10px 10px -5px #b6b6bb;
+    height: 537px;
 }
 .loader-name{
     color: white;
