@@ -18,7 +18,7 @@ export default function apphead() {
                     <Link className="nav-item" href="/fourthpage">
                         Landscape
                     </Link>
-                    <Link className="nav-item" href="/automotive">
+                    <Link className="nav-item" href="/home">
                         Automotive
                     </Link>
                     <Link className="nav-item" href="/commercial">

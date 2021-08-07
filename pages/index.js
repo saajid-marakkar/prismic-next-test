@@ -118,6 +118,7 @@ function Home({ image_links }) {
         }
         let nextImage = imagelinks[index]
         setImagesrc(nextImage)
+        
     }
     const touchStart = (event) => {
         setStartingX(0)
@@ -195,7 +196,7 @@ function Home({ image_links }) {
             </div>
             <div className="modalp">
                 <div className="preview-container">
-                    <div className="right" onClick={() => nextImage()}>
+                    <div className="right" onClick={() => nextImage()} title="Next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className ="bi bi-chevron-right" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                         </svg>
@@ -203,7 +204,7 @@ function Home({ image_links }) {
                     <div>
                         <img src={imagesrc} className="full-img" onTouchStart = {() => touchStart(event)} onTouchMove={() => touchMove(event)} onTouchEnd={() => touchEnd()} />
                     </div>
-                    <div className="left" onClick={() => prevImage()}>
+                    <div className="left" onClick={() => prevImage()} title="Previous">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className ="bi bi-chevron-left" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
                         </svg>

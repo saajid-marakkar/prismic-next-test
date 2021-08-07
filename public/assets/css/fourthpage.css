@@ -1,12 +1,36 @@
 *{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
     /* font-family: 'Montserrat'; */
     /* font-family: 'futura-pt'; */
 }
+
 /* @font-face {
     font-family: 'American Captain';
     src: url('http://www.fontsaddict.com/fontface/american-captain.ttf');
 } */
+.slider-container{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    /* opacity: 0.2; */
+    /* transition: opacity .5s cubic-bezier(.33,0,.2,1) */
+}
+.index-page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    
+    /* transition: all 0.7s ease-in-out 0.3s; */
+    
+}
 img {
     width: 100%;
     /* object-fit: cover; */

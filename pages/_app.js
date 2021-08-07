@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Apphead />
+      {/* <Apphead /> */}
       <Component {...pageProps} />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
