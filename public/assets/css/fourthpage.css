@@ -106,7 +106,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 10px -5px #b6b6bb;
+    /* box-shadow: 0 10px 10px -5px #b6b6bb; */
     height: 537px;
 }
 .loader-name{

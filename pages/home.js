@@ -3,6 +3,7 @@ import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import Footer from '../components/footer'
 
 
 
@@ -167,7 +168,6 @@ function Home({ image_links }) {
                                 </div>
                             </div>
                             <div className="grid">
-
                             </div>
                         </div>
                         :
@@ -192,6 +192,7 @@ function Home({ image_links }) {
                                 </div>
                             ))}
                         </div>
+                        
                 }
             </div>
             <div className="modalp">

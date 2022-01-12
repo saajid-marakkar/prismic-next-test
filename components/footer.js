@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 function footer() {
     const [isIndexPage, setIsIndexPage] = useState(false);
+    const [loading, setLoading] = useState(true)
     useEffect( ()=>
     {
         let path = window.location.pathname
@@ -16,12 +17,15 @@ function footer() {
             setIsIndexPage(false)
             console.log("cheking: ")
         }
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000);
         
     }, )
     return (
         <>
             {
-                isIndexPage ?
+                loading || isIndexPage?
                     <>
                     </>
                     :
