@@ -10,9 +10,7 @@ export async function getStaticProps()
   const images = await Client().query(
     Prismic.Predicates.at("document.type","images")
   );
-    console.log("blog page",images.results)
 
-    console.log("blog page",images.results[0].data.images_group[0].image.url)
     let image_links = [];
     {images.results.map((image, index) => (
                   
@@ -21,13 +19,10 @@ export async function getStaticProps()
             image_links.push(pic.image.url)
         )))
     ))} 
-    console.log("image url",image_links[1])
     
   return {
     props: {
         image_links: image_links
-
-      
     },
   };
 }

@@ -18,8 +18,6 @@ export async function getStaticProps() {
     return {
         props: {
             image_links: image_links
-
-
         },
     };
 }
@@ -68,24 +66,26 @@ function index({ image_links }) {
 
     return (
         <div >
-            <div className="slider-container">
-                {image_links.map((image_url, index) => (
-                    <div className="slide " style={{backgroundImage:"url("+image_url+")"}} >
-                        <div className="caption">
-                            <h1  className="slide-page-heading">VISHNU SAGAR</h1>
-                            <p>Photographer Based In Canada</p>
-                            <div className="button-container ">
-                                <div className="slider-button ">
-                                    <a href="/home">PORTFOLIO</a>
-                                </div>
-                                <div className="slider-button ">
-                                    <a href="https://www.instagram.com/mevishnusagar/?hl=en">INSTAGRAM</a>
-                                </div>
-                            </div>  
+            <div>
+                <div className="slider-container">
+                    {image_links.map((image_url, index) => (
+                        <div className="slide " style={{backgroundImage:"url("+image_url+")"}} >
+                            <div className="caption">
+                                <h1  className="slide-page-heading">VISHNU SAGAR</h1>
+                                <p>Photographer Based In Canada</p>
+                                <div className="button-container ">
+                                    <div className="slider-button ">
+                                        <a href="/home">PORTFOLIO</a>
+                                    </div>
+                                    <div className="slider-button ">
+                                        <a href="https://www.instagram.com/mevishnusagar/?hl=en">INSTAGRAM</a>
+                                    </div>
+                                </div>  
+                            </div>
+                        
                         </div>
-                    
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
             <script type="text/javascript" src="assets/js/slider.js"></script>
         </div>
