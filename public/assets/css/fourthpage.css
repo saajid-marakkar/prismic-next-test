@@ -27,9 +27,18 @@
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    /* animation: slideshow 5.7s infinite;  */
     
     /* transition: all 0.7s ease-in-out 0.3s; */
     
+}
+@keyframes slideshow{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 img {
     width: 100%;
@@ -273,3 +282,5 @@ a{
     cursor: pointer;
     margin-top: 22%;
 }
+
+

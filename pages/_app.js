@@ -9,13 +9,17 @@ import "../public/assets/css/fourthpage.css"
 import "../public/assets/css/animation.css"
 import "../public/assets/css/header.css"
 // import "../public/assets/js/colcade2.js"
+import "../public/assets/css/slider.css"
 function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* <Apphead /> */}
+    {
+
+    }
+      <Apphead />
       <Component {...pageProps} />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

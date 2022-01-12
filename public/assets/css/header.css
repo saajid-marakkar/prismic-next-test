@@ -1,8 +1,8 @@
-@import url('http://fonts.cdnfonts.com/css/american-captain?styles=15583');
+/* @import url('http://fonts.cdnfonts.com/css/american-captain?styles=15583'); */
 *{
     /* font-family: Montserrat; */
-    /* font-family: "American Captain"; */
-    font-weight: bold;
+    font-family: "American Captain";
+    /* font-weight: bold; */
 }
 .navbar {
     /* border: 2px solid black; */
