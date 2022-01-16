@@ -13,7 +13,7 @@ class MyDocument extends Document {
           {/* <link rel="stylesheet" href="assets/css/fourthpage.css" />
             <link rel="stylesheet" href="assets/css/animation.css" /> */}
           <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" ></link>
-          <link href="http://fonts.cdnfonts.com/css/american-captain?styles=15583" rel="stylesheet"/>
+          <link href="https://fonts.cdnfonts.com/css/american-captain?styles=15583" rel="stylesheet"/>
           <script type="text/javascript" src="assets/js/colcade2.js"></script>
         </Head>
         <body>
