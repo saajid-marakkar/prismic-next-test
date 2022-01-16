@@ -25,6 +25,7 @@ export async function getStaticProps() {
 
 
 function index({ image_links }) {
+    
     useEffect(() => {
         var slide = document.querySelectorAll('.slide');
         var current = 0;

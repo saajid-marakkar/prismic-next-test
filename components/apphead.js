@@ -29,25 +29,25 @@ export default function apphead() {
                                 <Link href="/home" ><img src="assets/images/black-height-updated.png" className="main-page-logo"></img></Link>
                             </div>
                             <div className="navbar">
-                                <Link className="nav-item" href="/home">
+                                <Link className="nav-item nav-item-home active" href="/home">
                                     Home
                                 </Link>
-                                <Link className="nav-item" href="/portraits">
+                                <Link className="nav-item nav-item-portraits" href="/portraits">
                                     Portraits
                                 </Link>
-                                <Link className="nav-item" href="/fourthpage">
+                                <Link className="nav-item nav-item-fourthpage" href="/fourthpage">
                                     Landscape
                                 </Link>
-                                <Link className="nav-item" href="/home">
+                                <Link className="nav-item nav-item-fourthpage" href="/home">
                                     Automotive
                                 </Link>
-                                <Link className="nav-item" href="/commercial">
+                                <Link className="nav-item nav-item-commercial" href="/commercial">
                                     Commercial
                                 </Link>
-                                <Link className="nav-item" href="/about">
+                                <Link className="nav-item nav-item-about" href="/about">
                                     About
                                 </Link>
-                                <Link className="nav-item" href="/contact-me">
+                                <Link className="nav-item nav-item-contact-me" href="/contact-me">
                                     Contact Me
                                 </Link>
                             </div>
