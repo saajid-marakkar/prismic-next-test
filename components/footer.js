@@ -5,6 +5,7 @@ import Link from 'next/link'
 function footer() {
     const [isIndexPage, setIsIndexPage] = useState(false);
     const [loading, setLoading] = useState(true)
+    const [signHelper, setSignHelper] = useState("")
     useEffect( ()=>
     {
         let path = window.location.pathname
@@ -12,10 +13,11 @@ function footer() {
         if (path == "/")
         {
             setIsIndexPage(true) 
+            setSignHelper("sign-in-index")
         }
         else{
             setIsIndexPage(false)
-            console.log("cheking: ")
+            setSignHelper("sign-in-other")
         }
         setTimeout(() => {
             setLoading(false)
@@ -28,7 +30,7 @@ function footer() {
                 isIndexPage ?
                     <div>
                         <div>
-                            <div className="text-center footer">
+                            <div className="text-center footer-in-index">
                                 <img src="assets/images/sign-white.png" className="sign"></img>
                             </div>
                         </div>

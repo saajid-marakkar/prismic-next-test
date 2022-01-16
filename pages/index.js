@@ -4,7 +4,7 @@ import { Client } from "../prismic-configuration";
 export async function getStaticProps() {
 
     const images = await Client().query(
-        Prismic.Predicates.at("document.type","home_page")
+        Prismic.Predicates.at("document.type","automotive_page")
     );
     let image_links = [];
     {
@@ -25,7 +25,7 @@ export async function getStaticProps() {
 
 
 function index({ image_links }) {
-    
+
     useEffect(() => {
         var slide = document.querySelectorAll('.slide');
         var current = 0;

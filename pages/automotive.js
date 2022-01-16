@@ -3,51 +3,41 @@ import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import Footer from '../components/footer'
-
 
 
 export async function getStaticProps() {
 
     const images = await Client().query(
-        Prismic.Predicates.at("document.type", "outdoor_page")
+        Prismic.Predicates.at("document.type", "automotive_page")
     );
-    console.log("blog page", images.results)
-
-    console.log("blog page", images.results[0].data.images_group[0].image.url)
     let image_links = [];
     {
         images.results.map((image, index) => (
-
-
             (image.data.images_group.map((pic, index) => (
                 image_links.push(pic.image.url)
             )))
         ))
     }
-    
-
     return {
         props: {
             image_links: image_links
-
-
         },
     };
 }
 
-function Outdoor({ image_links }) {
+function Automotive({ image_links }) {
     const [flag, setFlag] = useState(3)
     const [width, setwidth] = useState(0)
     const [loading, setLoading] = useState(false)
     const [display, setDisplay] = useState("none")
+    const [open, setOpen] = useState("")
     const [imagesrc, setImagesrc] = useState(" ")
     const [imagelinks, setImagelinks] = useState([])
     const [startingX, setStartingX] = useState();
     const [startingY, setStartingY] = useState();
     const [movingX, setMovingX] = useState();
     const [movingY, setMovingY] = useState();
-    const antIcon = <LoadingOutlined style={{ fontSize: 36 }} spin />;
+    const antIcon = <LoadingOutlined style={{ fontSize: 26 }} spin />;
     useEffect(() => {
 
         var grid = document.querySelector('.grid');
@@ -154,7 +144,6 @@ function Outdoor({ image_links }) {
 
         <div>
             <div className="gallery-container">
-
                 {
                     loading == false ?
                         <div className="gallery-container" >
@@ -210,14 +199,10 @@ function Outdoor({ image_links }) {
                         </svg>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
 
     )
 }
 
-export default Outdoor
+export default Automotive

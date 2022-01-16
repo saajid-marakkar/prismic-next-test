@@ -38,7 +38,7 @@ export default function apphead() {
                                 <Link className="nav-item nav-item-fourthpage" href="/fourthpage">
                                     Landscape
                                 </Link>
-                                <Link className="nav-item nav-item-fourthpage" href="/home">
+                                <Link className="nav-item nav-item-fourthpage" href="/automotive">
                                     Automotive
                                 </Link>
                                 <Link className="nav-item nav-item-commercial" href="/commercial">
@@ -83,13 +83,13 @@ export default function apphead() {
                                 <div className="menu ">
                                     <div className="menu-inner">
                                         <ul className="menu-nav">
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/"><span>
+                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/home"><span>
                                                 <div>Home</div>
                                             </span></a></li>
                                             <li className="menu-nav-item"><a className="menu-nav-link" href="/portraits"><span>
                                                 <div>Portraits</div>
                                             </span></a></li>
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/fourthpage"><span>
+                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/landscape"><span>
                                                 <div>Landscape</div>
                                             </span></a></li>
                                             <li className="menu-nav-item"><a className="menu-nav-link" href="/automotive"><span>
@@ -117,7 +117,7 @@ export default function apphead() {
                                                         </a>
                                                     </div>
                                                     <div>
-                                                        <a className="btn" href="http://www.facebook.com/profile.php?id=" ><i
+                                                        <a className="btn" href="https://www.instagram.com/mevishnusagar/" ><i
                                                             className="fa fa-instagram fa-sm"></i>
                                                         </a>
                                                     </div>

@@ -3,8 +3,6 @@ import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import Footer from '../components/footer'
-
 
 
 export async function getStaticProps() {
@@ -12,26 +10,17 @@ export async function getStaticProps() {
     const images = await Client().query(
         Prismic.Predicates.at("document.type", "home_page")
     );
-    console.log("blog page", images.results)
-
-    console.log("blog page", images.results[0].data.images_group[0].image.url)
     let image_links = [];
     {
         images.results.map((image, index) => (
-
-
             (image.data.images_group.map((pic, index) => (
                 image_links.push(pic.image.url)
             )))
         ))
     }
-    
-
     return {
         props: {
             image_links: image_links
-
-
         },
     };
 }
@@ -155,7 +144,6 @@ function Home({ image_links }) {
 
         <div>
             <div className="gallery-container">
-
                 {
                     loading == false ?
                         <div className="gallery-container" >
@@ -211,11 +199,7 @@ function Home({ image_links }) {
                         </svg>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
 
     )
