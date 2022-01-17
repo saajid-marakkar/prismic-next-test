@@ -8,7 +8,6 @@ import { LoadingOutlined } from '@ant-design/icons';
 
 
 export async function getStaticProps() {
-
     const images = await Client().query(
         Prismic.Predicates.at("document.type", "home_page")
     );
@@ -22,8 +21,6 @@ export async function getStaticProps() {
             )))
         ))
     }
-    
-
     return {
         props: {
             image_links: image_links

@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Prismic from "prismic-javascript";
-import { Client } from "../prismic-configuration";
+import React from 'react';
 import Link from 'next/link'
 
 function Portraits() {
@@ -10,19 +8,23 @@ function Portraits() {
                 <div className="portraits-page-menu">
                     <div className="portraits-page-menu-item">
                         <Link href="indoor">
-                            <img src="assets/images/indoor.jpeg" />
+                            <>
+                                <img src="assets/images/indoor.jpeg" />
+                                <div className="centered-text">
+                                    <h1>INDOOR</h1>
+                                </div>
+                            </>
                         </Link>
-                        <div className="centered-text">
-                            <h1>INDOOR</h1>
-                        </div>
                     </div>
                     <div className="portraits-page-menu-item">
                         <Link href="outdoor">
-                            <img src="assets/images/outdoor.jpeg" />
+                            <>
+                                <img src="assets/images/outdoor.jpeg" />
+                                <div className="centered-text">
+                                    <h1>OUTDOOR</h1>
+                                </div>
+                            </>
                         </Link>
-                        <div className="centered-text">
-                            <h1>OUTDOOR</h1>
-                        </div>
                     </div>
                 </div>
             </div>
