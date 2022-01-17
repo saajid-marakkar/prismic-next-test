@@ -8,7 +8,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 export async function getStaticProps() {
 
     const images = await Client().query(
-        Prismic.Predicates.at("document.type", "home_page")
+        Prismic.Predicates.at("document.type", "landscape_page")
     );
     let image_links = [];
     {
@@ -25,7 +25,7 @@ export async function getStaticProps() {
     };
 }
 
-function Home({ image_links }) {
+function Landscape({ image_links }) {
     const [flag, setFlag] = useState(3)
     const [width, setwidth] = useState(0)
     const [loading, setLoading] = useState(false)
@@ -144,12 +144,13 @@ function Home({ image_links }) {
 
         <div>
             <div className="gallery-container">
+
                 {
                     loading == false ?
                         <div className="gallery-container" >
                             <div className="text-center loader-container">
                                 <div>
-                                    <Spin indicator={antIcon} /> 
+                                    <Spin indicator={antIcon} />
                                 </div>
                                 <div>
                                     <h2>loading..</h2>
@@ -199,10 +200,14 @@ function Home({ image_links }) {
                         </svg>
                     </div>
                 </div>
+
+
             </div>
+
+
         </div>
 
     )
 }
 
-export default Home
+export default Landscape

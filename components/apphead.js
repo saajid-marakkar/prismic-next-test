@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-import Head from 'next/head'
 export default function apphead() {
     const [isIndexPage, setIsIndexPage] = useState(false);
     useEffect( ()=>
@@ -35,7 +34,7 @@ export default function apphead() {
                                 <Link className="nav-item nav-item-portraits" href="/portraits">
                                     Portraits
                                 </Link>
-                                <Link className="nav-item nav-item-fourthpage" href="/fourthpage">
+                                <Link className="nav-item nav-item-fourthpage" href="/landscape">
                                     Landscape
                                 </Link>
                                 <Link className="nav-item nav-item-fourthpage" href="/automotive">

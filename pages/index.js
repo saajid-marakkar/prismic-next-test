@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head'
 import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 export async function getStaticProps() {
