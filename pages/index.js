@@ -79,9 +79,9 @@ function index({ image_links }) {
                                     <div className="slider-button ">
                                         <a href="/home">PORTFOLIO</a>
                                     </div>
-                                    <div className="slider-button ">
+                                    {/* <div className="slider-button ">
                                         <a href="https://www.instagram.com/mevishnusagar/?hl=en">INSTAGRAM</a>
-                                    </div>
+                                    </div> */}
                                 </div>  
                             </div>
                         
