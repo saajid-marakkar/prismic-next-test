@@ -12,9 +12,6 @@ export async function getStaticProps() {
     const images = await Client().query(
         Prismic.Predicates.at("document.type", "home_page")
     );
-    console.log("blog page", images.results)
-
-    console.log("blog page", images.results[0].data.images_group[0].image.url)
     let image_links = [];
     {
         images.results.map((image, index) => (
