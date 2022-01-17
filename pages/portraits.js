@@ -8,22 +8,22 @@ function Portraits() {
                 <div className="portraits-page-menu">
                     <div className="portraits-page-menu-item">
                         <Link href="indoor">
-                            <>
+                            <div>
                                 <img src="assets/images/indoor.jpeg" />
                                 <div className="centered-text">
                                     <h1>INDOOR</h1>
                                 </div>
-                            </>
+                            </div>
                         </Link>
                     </div>
                     <div className="portraits-page-menu-item">
                         <Link href="outdoor">
-                            <>
+                            <div>
                                 <img src="assets/images/outdoor.jpeg" />
                                 <div className="centered-text">
                                     <h1>OUTDOOR</h1>
                                 </div>
-                            </>
+                            </div>
                         </Link>
                     </div>
                 </div>
