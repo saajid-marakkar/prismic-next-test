@@ -71,12 +71,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white !important;
+    
 
 }
 .slider-button a {
     text-decoration: none;
     opacity: 1 !important;
+    color: white !important;
 }
 .slider-button:hover{
     background-color: rgb(255, 255, 255);
