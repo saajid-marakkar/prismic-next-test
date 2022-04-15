@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 
 function Portraits() {
+    const [loading, setLoading] = useState(false)
+    const antIcon = <LoadingOutlined style={{ fontSize: 26 }} spin />;
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(true)
+        }, 1000);
+    });
     return (
         <div className="container">
+            {
+                    loading == false ?
+                    <div className="gallery-container" >
+                            <div className="text-center loader-container">
+                                <div>
+                                    <Spin indicator={antIcon} /> 
+                                </div>
+                                <div>
+                                    <h2>loading..</h2>
+                                </div>
+                            </div>
+                            <div className="grid">
+                            </div>
+                        </div>
+                    :
             <div className="portraits-page">
                 <div className="portraits-page-menu">
                     <div className="portraits-page-menu-item">
@@ -28,6 +53,7 @@ function Portraits() {
                     </div>
                 </div>
             </div>
+        }
         </div>
         // <div class="container">
         //     <div className="portraits-page">

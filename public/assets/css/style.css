@@ -216,14 +216,15 @@ link .nav-item-home{
 }
 .aboutpage-description-container{
     width: 70%;
-    margin-top: 15px;
+    margin-top: 25px;
     text-align: center;
     margin: auto;
 }
 .aboutpage-description{
-    margin-top: 50px;
+    margin-top: 15px;
     letter-spacing: 4px;
     word-spacing: 2px;
+    font-weight: lighter !important;
 }
 .aboutpage-image {
     margin: auto;

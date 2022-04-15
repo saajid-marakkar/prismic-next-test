@@ -40,9 +40,9 @@ export default function apphead() {
                                 <Link className="nav-item nav-item-fourthpage" href="/automotive">
                                     Automotive
                                 </Link>
-                                <Link className="nav-item nav-item-commercial" href="/commercial">
+                                {/* <Link className="nav-item nav-item-commercial" href="/commercial">
                                     Commercial
-                                </Link>
+                                </Link> */}
                                 <Link className="nav-item nav-item-about" href="/about">
                                     About
                                 </Link>
