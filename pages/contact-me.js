@@ -16,34 +16,34 @@ function contactMe() {
                         <div className="dual-input">
                             <div class="first-name">
                                 <label htmlFor="first">First Name</label>
-                                <input type="text" id="first" placeholder="enter your first name" />
+                                <input type="text" id="first-name-input" placeholder="enter your first name" />
                             </div>
                             <div class="last-name">
                                 <label htmlFor="last">Last Name</label>
-                                <input type="text" id="last" placeholder="enter your last name" />
+                                <input type="text" id="last-name-input" placeholder="enter your last name" />
                             </div>
                         </div>
                         <div class="email">
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" placeholder="enter your address email" />
+                            <input type="email" id="email-input" placeholder="enter your address email" />
                         </div>
                         <div className="dual-input">
                             <div class="phone">
-                                <label htmlFor="first">Phone</label>
-                                <input type="text" id="first" placeholder="enter your phone number" />
+                                <label htmlFor="phone">Phone</label>
+                                <input type="tel" id="phone-input" placeholder="enter your phone number" />
                             </div>
                             <div class="location">
-                                <label htmlFor="last">Location</label>
-                                <input type="text" id="last" placeholder="enter where are you from" />
+                                <label htmlFor="location">Location</label>
+                                <input type="text" id="location-input" placeholder="enter where are you from" />
                             </div>
                         </div>
-                        <div class="email">
-                            <label htmlFor="email">My favourite part: youselves!</label>
-                            <textarea id="email" placeholder="tell me about youselves" />
+                        <div class="favourite-part">
+                            <label htmlFor="favourite-part">My favourite part: youselves!</label>
+                            <textarea id="favourite-part-input" placeholder="tell me about youselves" />
                         </div>
-                        <div class="email">
-                            <label htmlFor="email">About Session</label>
-                            <textarea id="email" placeholder="tell me which session or what kinda photo service are you looking for?" />
+                        <div class="about">
+                            <label htmlFor="about">About Session</label>
+                            <textarea id="about-input" placeholder="tell me which session or what kinda photo service are you looking for?" />
                         </div>
                         <div class="sub">
                             <input type="submit" value="Send" />
