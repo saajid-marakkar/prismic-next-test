@@ -94,9 +94,9 @@ export default function apphead() {
                                             <li className="menu-nav-item"><a className="menu-nav-link" href="/automotive"><span>
                                                 <div>Automotive</div>
                                             </span></a></li>
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/commercial"><span>
+                                            {/* <li className="menu-nav-item"><a className="menu-nav-link" href="/commercial"><span>
                                                 <div>Commercial</div>
-                                            </span></a></li>
+                                            </span></a></li> */}
                                             <li className="menu-nav-item"><a className="menu-nav-link" href="/about"><span>
                                                 <div>About</div>
                                             </span></a></li>

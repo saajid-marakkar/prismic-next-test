@@ -16,7 +16,7 @@
   .first-name, .last-name, .phone, .location {
     width: 50%;
   }
-  .first-name-last-name, .phone-location{
+  .dual-input{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -72,11 +72,11 @@
   .email textarea{
     text-align: center;
     color: #777777;
-    font-size: 18px;
+    font-size: 16px;
     outline:none;
     border-radius:7px;
     width:100%;
-    height:40px;
+    height:77px;
     border:none;
     box-shadow: inset -1px -4px 1px rgba(255, 255,255,1),
                 inset 2px 2px 3px rgba(0, 0,0,0.1);
@@ -158,15 +158,25 @@
   .email label,
   .phone label,
   .location label{
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 4px !important;
   }
   ::-webkit-input-placeholder{
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: 1px;
     word-spacing: 1px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  ::-webkit-textarea-placeholder{
+    font-size: 15px;
+    text-align: center;
+    color: #939696;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    font-weight: lighter !important;
+    font-family:'Times New Roman', Times, serif;
+    padding-top: 5px;
   }
   .first-name input,
   .last-name input,
@@ -174,7 +184,10 @@
   .phone input,
   .location input{
     letter-spacing: 1px;
-    font-size: 12px;
+    /* font-size: 12px;  */
+  }
+  .email textarea{
+    letter-spacing: 1px;
   }
   .sub input{
     margin: 20px;
@@ -187,7 +200,7 @@
     height:30px;
     border:none;
     box-shadow:  -2px -2px 6px rgba(189, 189, 189, 0.6),
-                 2px 2px 6px rgba(0, 0,0,0.3);
+                 2px 2px 6px rgba(0, 0,0,0.2);
     background:  #ffffff;
   }
 

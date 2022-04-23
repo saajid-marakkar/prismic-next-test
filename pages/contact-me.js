@@ -13,7 +13,7 @@ function contactMe() {
                         <h2>Contact Me</h2>
                     </div>
                     <div className="contact-form">
-                        <div className="first-name-last-name">
+                        <div className="dual-input">
                             <div class="first-name">
                                 <label htmlFor="first">First Name</label>
                                 <input type="text" id="first" placeholder="enter your first name" />
@@ -27,7 +27,7 @@ function contactMe() {
                             <label htmlFor="email">Email</label>
                             <input type="email" id="email" placeholder="enter your address email" />
                         </div>
-                        <div className="phone-location">
+                        <div className="dual-input">
                             <div class="phone">
                                 <label htmlFor="first">Phone</label>
                                 <input type="text" id="first" placeholder="enter your phone number" />

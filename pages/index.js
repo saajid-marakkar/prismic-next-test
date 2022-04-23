@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
+import Link from 'next/link'
 import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 export async function getStaticProps() {
@@ -77,7 +77,7 @@ function index({ image_links }) {
                                 <p>Photographer Based In Canada</p>
                                 <div className="button-container ">
                                     <div className="slider-button ">
-                                        <a href="/home">PORTFOLIO</a>
+                                        <Link href="/home">PORTFOLIO</Link>
                                     </div>
                                     {/* <div className="slider-button ">
                                         <a href="https://www.instagram.com/mevishnusagar/?hl=en">INSTAGRAM</a>
