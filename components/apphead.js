@@ -11,16 +11,6 @@ export default function apphead() {
     const aboutPage = ["about"]
     const contactMePage = ["contact-me"]
     const [isIndexPage, setIsIndexPage] = useState(false);
-    useEffect(() => {
-        let path = window.location.pathname
-        console.log(path)
-        if (path == "/") {
-            setIsIndexPage(true)
-        }
-        else {
-            setIsIndexPage(false)
-        }
-    })
 
     useEffect(() => {
         const currentPageUrl = Route.pathname || "";
@@ -39,6 +29,17 @@ export default function apphead() {
             document.querySelector("#contact-me-active").classList.add("active")
         }
     }, [Route])
+
+    useEffect(() => {
+        let path = window.location.pathname
+        console.log(path)
+        if (path == "/") {
+            setIsIndexPage(true)
+        }
+        else {
+            setIsIndexPage(false)
+        }
+    })
 
     return (
         <>
