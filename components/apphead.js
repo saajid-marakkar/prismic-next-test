@@ -20,8 +20,6 @@ export default function apphead() {
         else {
             setIsIndexPage(false)
         }
-        console.log(document.querySelector("#home-active").classList)
-
     })
 
     useEffect(() => {

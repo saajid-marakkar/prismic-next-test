@@ -201,7 +201,7 @@
 .active a{
     color: rgb(3, 3, 3) !important;
 }
-.active div{
+li .active{
     color: rgb(3, 3, 3) !important;
 }
 @media screen and (max-width: 750px) {
