@@ -1,11 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 
 function contactMe() {
+    const [formStatus, setFormStatus] = useState("");
+    const [isSubmitSucess, setIsSubmitSucess] = useState(false);
+    let submitMessageStyle1 = {
+        color:"#939696"
+    };
+    let submitMessageStyle2 = {
+        color:"#FF0000"
+    };
+    const submitForm = () => {
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwLORTYjmbKqFlGxIg8qsjlq8DlRO2tLN4QDE-erEsr0WBTth7rrXn_6yUCCcjqzUFs/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    setIsSubmitSucess(true)
+                    setFormStatus("Contact me request submitted successfully!")
+                    $('#submit-form')[0].reset()
+                    // window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    setFormStatus("Something went wrong, Try again")
+    
+                }
+            })
+        })
+    }
+
     return (
         <div >
             <Head>
                 <link href="/assets/css/contactme.css" rel="stylesheet" />
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             </Head>
             <div >
                 <div className="contact-form-section">
@@ -13,41 +44,44 @@ function contactMe() {
                         <h2>Contact Me</h2>
                     </div>
                     <div className="contact-form">
-                        <div className="dual-input">
-                            <div class="first-name">
-                                <label htmlFor="first">First Name</label>
-                                <input type="text" id="first-name-input" placeholder="enter your first name" />
+                        <form id="submit-form" action=""> 
+                            <div className="dual-input">
+                                <div className="first-name">
+                                    <label htmlFor="first">First Name</label>
+                                    <input type="text" id="first-name-input" name="firstname" placeholder="enter your first name" />
+                                </div>
+                                <div className="last-name">
+                                    <label htmlFor="last">Last Name</label>
+                                    <input type="text" id="last-name-input" name="lastname" placeholder="enter your last name" />
+                                </div>
                             </div>
-                            <div class="last-name">
-                                <label htmlFor="last">Last Name</label>
-                                <input type="text" id="last-name-input" placeholder="enter your last name" />
+                            <div className="email">
+                                <label htmlFor="email">Email</label>
+                                <input type="email" id="email-input" name="email" placeholder="enter your address email" />
                             </div>
-                        </div>
-                        <div class="email">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id="email-input" placeholder="enter your address email" />
-                        </div>
-                        <div className="dual-input">
-                            <div class="phone">
-                                <label htmlFor="phone">Phone</label>
-                                <input type="tel" id="phone-input" placeholder="enter your phone number" />
+                            <div className="dual-input">
+                                <div className="phone">
+                                    <label htmlFor="phone">Phone</label>
+                                    <input type="tel" id="phone-input" name="phone" placeholder="enter your phone number" />
+                                </div>
+                                <div className="location">
+                                    <label htmlFor="location">Location</label>
+                                    <input type="text" id="location-input" name="location" placeholder="enter where are you from" />
+                                </div>
                             </div>
-                            <div class="location">
-                                <label htmlFor="location">Location</label>
-                                <input type="text" id="location-input" placeholder="enter where are you from" />
+                            <div className="favourite-part">
+                                <label htmlFor="favourite-part">My favourite part: yourselves!</label>
+                                <textarea id="favourite-part-input" name="yourselves" placeholder="tell me about yourselves" />
                             </div>
-                        </div>
-                        <div class="favourite-part">
-                            <label htmlFor="favourite-part">My favourite part: youselves!</label>
-                            <textarea id="favourite-part-input" placeholder="tell me about youselves" />
-                        </div>
-                        <div class="about">
-                            <label htmlFor="about">About Session</label>
-                            <textarea id="about-input" placeholder="tell me which session or what kinda photo service are you looking for?" />
-                        </div>
-                        <div class="sub">
-                            <input type="submit" value="Send" />
-                        </div>
+                            <div className="about">
+                                <label htmlFor="about">About Session</label>
+                                <textarea id="about-input" name="about" placeholder="tell me which session or what kinda photo service are you looking for?" />
+                            </div>
+                            <div className="sub">
+                                <input type="submit" value="Send" onClick={() => submitForm()} />
+                            </div>
+                            <div className="submit-status" style={isSubmitSucess ? submitMessageStyle1 : submitMessageStyle2} >{formStatus}</div>
+                        </form>
                     </div>
                 </div>
             </div>

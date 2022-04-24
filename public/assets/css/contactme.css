@@ -5,7 +5,7 @@
     background: #ffffff;
     border-radius: 20px;
     box-shadow: -5px -5px 15px rgba(255, 255,255,0.6),
-                5px 5px 10px rgba(0, 0,0,0.2);
+                5px 5px 10px rgba(0, 0,0,0.1);
     /* letter-spacing: 4px; */
 
     font-weight: lighter !important;
@@ -63,7 +63,7 @@
     height:40px;
     border:none;
     box-shadow: inset -1px -4px 1px rgba(255, 255,255,1),
-                inset 2px 2px 3px rgba(0, 0,0,0.2);
+                inset 2px 2px 3px rgba(0, 0,0,0.1);
     background: #ffffff;
     letter-spacing: 4px;
     word-spacing: 2px;
@@ -82,7 +82,7 @@
     height:77px;
     border:none;
     box-shadow: inset -1px -4px 1px rgba(255, 255,255,1),
-                inset 2px 2px 3px rgba(0, 0,0,0.2);
+                inset 2px 2px 3px rgba(0, 0,0,0.1);
     background: #ffffff;
     letter-spacing: 4px;
     word-spacing: 2px;
@@ -142,6 +142,11 @@
   }
   .sub label a{
     color: #63cdda;
+  }
+  .submit-status{
+    font-size: 15px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
   }
 
   @media only screen and (max-width: 767px) 
