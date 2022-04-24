@@ -8,7 +8,6 @@ function footer() {
     useEffect( ()=>
     {
         let path = window.location.pathname
-        console.log(path)
         if (path == "/")
         {
             setIsIndexPage(true) 

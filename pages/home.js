@@ -83,7 +83,6 @@ function Home({ image_links }) {
     }
     const nextImage = () => {
         setStartingX(0)
-        console.log(startingX)
         let size = imagelinks.length
         let index = imagelinks.findIndex(img => img == imagesrc);
         if (index == size - 1) {

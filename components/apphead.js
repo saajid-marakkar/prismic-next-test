@@ -1,24 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Link from 'next/link'
+import Head from 'next/head'
 export default function apphead() {
+    const Route = useRouter()
+    const homePage = ["home"]
+    const portraitsPage = ["portraits", "indoor", "outdoor"]
+    const landscapePage = ["landscape"]
+    const automativePage = ["automotive"]
+    const aboutPage = ["about"]
+    const contactMePage = ["contact-me"]
     const [isIndexPage, setIsIndexPage] = useState(false);
-    useEffect( ()=>
-    {
+    useEffect(() => {
         let path = window.location.pathname
         console.log(path)
-        if (path == "/")
-        {
-            setIsIndexPage(true) 
+        if (path == "/") {
+            setIsIndexPage(true)
         }
-        else{
+        else {
             setIsIndexPage(false)
         }
-        
-    }, )
+        console.log(document.querySelector("#home-active").classList)
+
+    })
+
+    useEffect(() => {
+        const currentPageUrl = Route.pathname || "";
+        const [_, baseUrl] = currentPageUrl.split("/") || []
+        if (homePage.includes(baseUrl)) {
+            document.querySelector("#home-active").classList.add("active")
+        } else if (portraitsPage.includes(baseUrl)) {
+            document.querySelector("#portraits-active").classList.add("active")
+        } else if (landscapePage.includes(baseUrl)) {
+            document.querySelector("#landscape-active").classList.add("active")
+        } else if (automativePage.includes(baseUrl)) {
+            document.querySelector("#automotive-active").classList.add("active")
+        } else if (aboutPage.includes(baseUrl)) {
+            document.querySelector("#about-active").classList.add("active")
+        } else if (contactMePage.includes(baseUrl)) {
+            document.querySelector("#contact-me-active").classList.add("active")
+        }
+    }, [Route])
+
     return (
         <>
+            <Head>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </Head>
             {
-                isIndexPage ? 
+                isIndexPage ?
                     <>
                     </>
                     :
@@ -28,27 +58,39 @@ export default function apphead() {
                                 <Link href="/home" ><img src="assets/images/black-height-updated.png" className="main-page-logo"></img></Link>
                             </div>
                             <div className="navbar">
-                                <Link className="nav-item nav-item-home active" href="/home">
-                                    Home
-                                </Link>
-                                <Link className="nav-item nav-item-portraits" href="/portraits">
+                                <div id="home-active">
+                                    <Link className="nav-item nav-item-home" href="/home" >
+                                        Home
+                                    </Link>
+                                </div>
+                                <div id="portraits-active">
+                                <Link className="nav-item nav-item-portraits" href="/portraits" >
                                     Portraits
                                 </Link>
+                                </div>
+                                <div  id="landscape-active">
                                 <Link className="nav-item nav-item-fourthpage" href="/landscape">
                                     Landscape
                                 </Link>
-                                <Link className="nav-item nav-item-fourthpage" href="/automotive">
+                                </div>
+                                <div id="automotive-active">
+                                <Link className="nav-item nav-item-fourthpage" href="/automotive" >
                                     Automotive
                                 </Link>
-                                {/* <Link className="nav-item nav-item-commercial" href="/commercial">
-                                    Commercial
-                                </Link> */}
-                                <Link className="nav-item nav-item-about" href="/about">
+                                </div>
+                                <div id="about-active">
+                                <Link className="nav-item nav-item-about" href="/about" >
                                     About
                                 </Link>
+                                </div>
+                                <div id="contact-me-active">
                                 <Link className="nav-item nav-item-contact-me" href="/contact-me">
                                     Contact Me
                                 </Link>
+                                </div>
+                                {/* <Link className="nav-item nav-item-commercial" href="/commercial">
+                                    Commercial
+                                </Link> */}
                             </div>
                             <div className="social-icons">
                                 <div>
@@ -65,7 +107,7 @@ export default function apphead() {
                                     <a className="btn" href="https://www.instagram.com/mevishnusagar/" ><i
                                         className="fa fa-instagram fa-sm"></i>
                                     </a>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                         <div className="mobile-header sticky-top ">
@@ -82,25 +124,25 @@ export default function apphead() {
                                 <div className="menu ">
                                     <div className="menu-inner">
                                         <ul className="menu-nav">
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/home"><span>
+                                            <li className="menu-nav-item" id="home-active"><a className="menu-nav-link" href="/home"><span>
                                                 <div>Home</div>
                                             </span></a></li>
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/portraits"><span>
+                                            <li className="menu-nav-item" id="portraits-active"><a className="menu-nav-link" href="/portraits"><span>
                                                 <div>Portraits</div>
                                             </span></a></li>
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/landscape"><span>
+                                            <li className="menu-nav-item" id="landscape-active"><a className="menu-nav-link" href="/landscape"><span>
                                                 <div>Landscape</div>
                                             </span></a></li>
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/automotive"><span>
+                                            <li className="menu-nav-item" ><a className="menu-nav-link" href="/automotive"><span id="automotive-active">
                                                 <div>Automotive</div>
                                             </span></a></li>
                                             {/* <li className="menu-nav-item"><a className="menu-nav-link" href="/commercial"><span>
                                                 <div>Commercial</div>
                                             </span></a></li> */}
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/about"><span>
+                                            <li className="menu-nav-item" id="about-active"><a className="menu-nav-link" href="/about"><span>
                                                 <div>About</div>
                                             </span></a></li>
-                                            <li className="menu-nav-item"><a className="menu-nav-link" href="/contact-me"><span>
+                                            <li className="menu-nav-item" id="contact-me-active"><a className="menu-nav-link" href="/contact-me"><span>
                                                 <div>Contact Me</div>
                                             </span></a></li>
                                             <li>
