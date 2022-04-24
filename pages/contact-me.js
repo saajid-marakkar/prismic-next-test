@@ -5,7 +5,7 @@ function contactMe() {
     const [formStatus, setFormStatus] = useState("");
     const [isSubmitSucess, setIsSubmitSucess] = useState(false);
     let submitMessageStyle1 = {
-        color:"#939696"
+        color:"rgb(87 82 87)"
     };
     let submitMessageStyle2 = {
         color:"#FF0000"
