@@ -10,9 +10,10 @@ function contactMe() {
     let submitMessageStyle2 = {
         color:"#FF0000"
     };
-    const submitForm = () => {
+    const submitForm = (e) => {
         $("#submit-form").submit((e)=>{
             e.preventDefault()
+            console.log("submit fn.")
             $.ajax({
                 url:"https://script.google.com/macros/s/AKfycbwLORTYjmbKqFlGxIg8qsjlq8DlRO2tLN4QDE-erEsr0WBTth7rrXn_6yUCCcjqzUFs/exec",
                 data:$("#submit-form").serialize(),
@@ -20,8 +21,8 @@ function contactMe() {
                 success:function (response){
                     setIsSubmitSucess(true)
                     setFormStatus("Contact me request submitted successfully!")
-                    $('#submit-form')[0].reset()
-                    // window.location.reload()
+                    // $('#submit-form')[0].reset()
+                    window.location.reload()
                     //window.location.href="https://google.com"
                 },
                 error:function (err){
@@ -78,7 +79,7 @@ function contactMe() {
                                 <textarea id="about-input" name="about" placeholder="tell me which session or what kinda photo service are you looking for?" />
                             </div>
                             <div className="sub">
-                                <input type="submit" value="Send" onClick={() => submitForm()} />
+                                <input type="submit" value="Send" onClick={(e) => submitForm()} />
                             </div>
                             <div className="submit-status" style={isSubmitSucess ? submitMessageStyle1 : submitMessageStyle2} >{formStatus}</div>
                         </form>
