@@ -13,21 +13,23 @@ export default function apphead() {
     const [isIndexPage, setIsIndexPage] = useState(false);
 
     useEffect(() => {
-        const currentPageUrl = Route.pathname || "";
-        const [_, baseUrl] = currentPageUrl.split("/") || []
-        if (homePage.includes(baseUrl)) {
-            document.querySelector("#home-active").classList.add("active")
-        } else if (portraitsPage.includes(baseUrl)) {
-            document.querySelector("#portraits-active").classList.add("active")
-        } else if (landscapePage.includes(baseUrl)) {
-            document.querySelector("#landscape-active").classList.add("active")
-        } else if (automativePage.includes(baseUrl)) {
-            document.querySelector("#automotive-active").classList.add("active")
-        } else if (aboutPage.includes(baseUrl)) {
-            document.querySelector("#about-active").classList.add("active")
-        } else if (contactMePage.includes(baseUrl)) {
-            document.querySelector("#contact-me-active").classList.add("active")
-        }
+        setTimeout(() => {
+            const currentPageUrl = Route.pathname || "";
+            const [_, baseUrl] = currentPageUrl.split("/") || []
+            if (homePage.includes(baseUrl)) {
+                document.querySelector("#home-active").classList.add("active")
+            } else if (portraitsPage.includes(baseUrl)) {
+                document.querySelector("#portraits-active").classList.add("active")
+            } else if (landscapePage.includes(baseUrl)) {
+                document.querySelector("#landscape-active").classList.add("active")
+            } else if (automativePage.includes(baseUrl)) {
+                document.querySelector("#automotive-active").classList.add("active")
+            } else if (aboutPage.includes(baseUrl)) {
+                document.querySelector("#about-active").classList.add("active")
+            } else if (contactMePage.includes(baseUrl)) {
+                document.querySelector("#contact-me-active").classList.add("active")
+            }
+        }, 1000);
     }, [Route])
 
     useEffect(() => {
@@ -63,29 +65,29 @@ export default function apphead() {
                                     </Link>
                                 </div>
                                 <div id="portraits-active">
-                                <Link className="nav-item nav-item-portraits" href="/portraits" >
-                                    Portraits
-                                </Link>
+                                    <Link className="nav-item nav-item-portraits" href="/portraits" >
+                                        Portraits
+                                    </Link>
                                 </div>
-                                <div  id="landscape-active">
-                                <Link className="nav-item nav-item-fourthpage" href="/landscape">
-                                    Landscape
-                                </Link>
+                                <div id="landscape-active">
+                                    <Link className="nav-item nav-item-fourthpage" href="/landscape">
+                                        Landscape
+                                    </Link>
                                 </div>
                                 <div id="automotive-active">
-                                <Link className="nav-item nav-item-fourthpage" href="/automotive" >
-                                    Automotive
-                                </Link>
+                                    <Link className="nav-item nav-item-fourthpage" href="/automotive" >
+                                        Automotive
+                                    </Link>
                                 </div>
                                 <div id="about-active">
-                                <Link className="nav-item nav-item-about" href="/about" >
-                                    About
-                                </Link>
+                                    <Link className="nav-item nav-item-about" href="/about" >
+                                        About
+                                    </Link>
                                 </div>
                                 <div id="contact-me-active">
-                                <Link className="nav-item nav-item-contact-me" href="/contact-me">
-                                    Contact Me
-                                </Link>
+                                    <Link className="nav-item nav-item-contact-me" href="/contact-me">
+                                        Contact Me
+                                    </Link>
                                 </div>
                                 {/* <Link className="nav-item nav-item-commercial" href="/commercial">
                                     Commercial
