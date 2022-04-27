@@ -2,25 +2,18 @@ import React, { useState, useEffect } from 'react';
 
 
 function footer() {
-    const [isIndexPage, setIsIndexPage] = useState(false);
-    const [loading, setLoading] = useState(true)
-    const [signHelper, setSignHelper] = useState("")
+    const [isIndexPage, setIsIndexPage] = useState(true);
+
     useEffect( ()=>
     {
         let path = window.location.pathname
         if (path == "/")
         {
             setIsIndexPage(true) 
-            setSignHelper("sign-in-index")
         }
         else{
             setIsIndexPage(false)
-            setSignHelper("sign-in-other")
         }
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000);
-        
     }, )
     return (
         <>
