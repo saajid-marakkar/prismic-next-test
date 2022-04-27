@@ -12,22 +12,7 @@ export default function apphead() {
     const [isIndexPage, setIsIndexPage] = useState(false);
     const [isHomePage, setIsHomePage] = useState(true);
 
-    useEffect(() => {
-        let path = window.location.pathname
-        if ("/home".localeCompare(path) != 0) {
-            console.log("else part")
-            setTimeout(() => {
-                setIsHomePage(false)
-            }, 1000);
 
-        }
-        else {
-            console.log(path)
-            console.log("/home".localeCompare(path) == 0)
-            setIsHomePage(true)
-            console.log(isHomePage)
-        }
-    }, [Route])
 
     useEffect(() => {
         let path = window.location.pathname
@@ -37,7 +22,7 @@ export default function apphead() {
         else {
             setIsIndexPage(false)
         }
-    })
+    },[Route])
 
 
     useEffect(() => {
