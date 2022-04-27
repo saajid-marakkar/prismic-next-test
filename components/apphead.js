@@ -9,7 +9,7 @@ export default function apphead() {
     const automotivePage = ["automotive"]
     const aboutPage = ["about"]
     const contactMePage = ["contact-me"]
-    const [isIndexPage, setIsIndexPage] = useState(false);
+    const [isIndexPage, setIsIndexPage] = useState(true);
     const [isHomePage, setIsHomePage] = useState(true);
 
 
