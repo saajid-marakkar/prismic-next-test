@@ -6,6 +6,7 @@ import "../public/assets/css/style.css"
 import "../public/assets/css/animation.css"
 import "../public/assets/css/header.css"
 import "../public/assets/css/slider.css"
+import "../public/assets/css/contactme.css"
 function MyApp({ Component, pageProps }) {
 
   return (

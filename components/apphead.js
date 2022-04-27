@@ -1,40 +1,36 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from 'next/link'
-import Head from 'next/head'
 export default function apphead() {
     const Route = useRouter()
     const homePage = ["home"]
     const portraitsPage = ["portraits", "indoor", "outdoor"]
     const landscapePage = ["landscape"]
-    const automativePage = ["automotive"]
+    const automotivePage = ["automotive"]
     const aboutPage = ["about"]
     const contactMePage = ["contact-me"]
     const [isIndexPage, setIsIndexPage] = useState(false);
+    const [isHomePage, setIsHomePage] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
-            const currentPageUrl = Route.pathname || "";
-            const [_, baseUrl] = currentPageUrl.split("/") || []
-            if (homePage.includes(baseUrl)) {
-                document.querySelector("#home-active").classList.add("active")
-            } else if (portraitsPage.includes(baseUrl)) {
-                document.querySelector("#portraits-active").classList.add("active")
-            } else if (landscapePage.includes(baseUrl)) {
-                document.querySelector("#landscape-active").classList.add("active")
-            } else if (automativePage.includes(baseUrl)) {
-                document.querySelector("#automotive-active").classList.add("active")
-            } else if (aboutPage.includes(baseUrl)) {
-                document.querySelector("#about-active").classList.add("active")
-            } else if (contactMePage.includes(baseUrl)) {
-                document.querySelector("#contact-me-active").classList.add("active")
-            }
-        }, 1000);
+        let path = window.location.pathname
+        if ("/home".localeCompare(path) != 0) {
+            console.log("else part")
+            setTimeout(() => {
+                setIsHomePage(false)
+            }, 1000);
+
+        }
+        else {
+            console.log(path)
+            console.log("/home".localeCompare(path) == 0)
+            setIsHomePage(true)
+            console.log(isHomePage)
+        }
     }, [Route])
 
     useEffect(() => {
         let path = window.location.pathname
-        console.log(path)
         if (path == "/") {
             setIsIndexPage(true)
         }
@@ -43,11 +39,110 @@ export default function apphead() {
         }
     })
 
+
+    useEffect(() => {
+        if (isIndexPage) {
+            setTimeout(() => {
+                const currentPageUrl = Route.pathname || "";
+                const [_, baseUrl] = currentPageUrl.split("/") || []
+                if (homePage.includes(baseUrl)) {
+                    document.querySelector("#home-active").classList.add("active")
+                    document.querySelector("#portraits-active").classList.remove("active")
+                    document.querySelector("#landscape-active").classList.remove("active")
+                    document.querySelector("#automotive-active").classList.remove("active")
+                    document.querySelector("#about-active").classList.remove("active")
+                    document.querySelector("#contact-me-active").classList.remove("active")
+                } else if (portraitsPage.includes(baseUrl)) {
+                    document.querySelector("#portraits-active").classList.add("active")
+                    document.querySelector("#home-active").classList.remove("active")
+                    document.querySelector("#landscape-active").classList.remove("active")
+                    document.querySelector("#automotive-active").classList.remove("active")
+                    document.querySelector("#about-active").classList.remove("active")
+                    document.querySelector("#contact-me-active").classList.remove("active")
+                } else if (landscapePage.includes(baseUrl)) {
+                    document.querySelector("#landscape-active").classList.add("active")
+                    document.querySelector("#home-active").classList.remove("active")
+                    document.querySelector("#portraits-active").classList.remove("active")
+                    document.querySelector("#automotive-active").classList.remove("active")
+                    document.querySelector("#about-active").classList.remove("active")
+                    document.querySelector("#contact-me-active").classList.remove("active")
+                } else if (automotivePage.includes(baseUrl)) {
+                    document.querySelector("#automotive-active").classList.add("active")
+                    document.querySelector("#home-active").classList.remove("active")
+                    document.querySelector("#portraits-active").classList.remove("active")
+                    document.querySelector("#landscape-active").classList.remove("active")
+                    document.querySelector("#about-active").classList.remove("active")
+                    document.querySelector("#contact-me-active").classList.remove("active")
+                } else if (aboutPage.includes(baseUrl)) {
+                    document.querySelector("#about-active").classList.add("active")
+                    document.querySelector("#home-active").classList.remove("active")
+                    document.querySelector("#portraits-active").classList.remove("active")
+                    document.querySelector("#landscape-active").classList.remove("active")
+                    document.querySelector("#automotive-active").classList.remove("active")
+                    document.querySelector("#contact-me-active").classList.remove("active")
+                } else if (contactMePage.includes(baseUrl)) {
+                    document.querySelector("#contact-me-active").classList.add("active")
+                    document.querySelector("#home-active").classList.remove("active")
+                    document.querySelector("#portraits-active").classList.remove("active")
+                    document.querySelector("#landscape-active").classList.remove("active")
+                    document.querySelector("#automotive-active").classList.remove("active")
+                    document.querySelector("#about-active").classList.remove("active")
+                }
+            }, 1000);
+        }
+        else {
+            const currentPageUrl = Route.pathname || "";
+            const [_, baseUrl] = currentPageUrl.split("/") || []
+            if (homePage.includes(baseUrl)) {
+                document.querySelector("#home-active").classList.add("active")
+                document.querySelector("#portraits-active").classList.remove("active")
+                document.querySelector("#landscape-active").classList.remove("active")
+                document.querySelector("#automotive-active").classList.remove("active")
+                document.querySelector("#about-active").classList.remove("active")
+                document.querySelector("#contact-me-active").classList.remove("active")
+            } else if (portraitsPage.includes(baseUrl)) {
+                document.querySelector("#portraits-active").classList.add("active")
+                document.querySelector("#home-active").classList.remove("active")
+                document.querySelector("#landscape-active").classList.remove("active")
+                document.querySelector("#automotive-active").classList.remove("active")
+                document.querySelector("#about-active").classList.remove("active")
+                document.querySelector("#contact-me-active").classList.remove("active")
+            } else if (landscapePage.includes(baseUrl)) {
+                document.querySelector("#landscape-active").classList.add("active")
+                document.querySelector("#home-active").classList.remove("active")
+                document.querySelector("#portraits-active").classList.remove("active")
+                document.querySelector("#automotive-active").classList.remove("active")
+                document.querySelector("#about-active").classList.remove("active")
+                document.querySelector("#contact-me-active").classList.remove("active")
+            } else if (automotivePage.includes(baseUrl)) {
+                document.querySelector("#automotive-active").classList.add("active")
+                document.querySelector("#home-active").classList.remove("active")
+                document.querySelector("#portraits-active").classList.remove("active")
+                document.querySelector("#landscape-active").classList.remove("active")
+                document.querySelector("#about-active").classList.remove("active")
+                document.querySelector("#contact-me-active").classList.remove("active")
+            } else if (aboutPage.includes(baseUrl)) {
+                document.querySelector("#about-active").classList.add("active")
+                document.querySelector("#home-active").classList.remove("active")
+                document.querySelector("#portraits-active").classList.remove("active")
+                document.querySelector("#landscape-active").classList.remove("active")
+                document.querySelector("#automotive-active").classList.remove("active")
+                document.querySelector("#contact-me-active").classList.remove("active")
+            } else if (contactMePage.includes(baseUrl)) {
+                document.querySelector("#contact-me-active").classList.add("active")
+                document.querySelector("#home-active").classList.remove("active")
+                document.querySelector("#portraits-active").classList.remove("active")
+                document.querySelector("#landscape-active").classList.remove("active")
+                document.querySelector("#automotive-active").classList.remove("active")
+                document.querySelector("#about-active").classList.remove("active")
+            }
+        }
+    }, [Route])
+
+
+
     return (
         <>
-            <Head>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            </Head>
             {
                 isIndexPage ?
                     <>
@@ -140,8 +235,8 @@ export default function apphead() {
                                             {/* <li className="menu-nav-item"><a className="menu-nav-link" href="/commercial"><span>
                                                 <div>Commercial</div>
                                             </span></a></li> */}
-                                            <li className="menu-nav-item" id="about-active"><a className="menu-nav-link" href="/about"><span>
-                                                <div>About</div>
+                                            <li className="menu-nav-item" ><a className="menu-nav-link" href="/about"><span id="about-active">
+                                                <div >About</div>
                                             </span></a></li>
                                             <li className="menu-nav-item" id="contact-me-active"><a className="menu-nav-link" href="/contact-me"><span>
                                                 <div>Contact Me</div>

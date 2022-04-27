@@ -204,6 +204,12 @@
 li .active{
     color: rgb(3, 3, 3) !important;
 }
+.active{
+    color: rgb(3, 3, 3) !important;
+}
+.a span{
+    color: rgb(3, 3, 3) !important;
+}
 @media screen and (max-width: 750px) {
     .menu {
         display: block;

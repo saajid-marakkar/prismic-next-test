@@ -10,7 +10,7 @@ function Portraits() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(true)
-        }, 1000);
+        }, 500);
     });
     return (
         <div className="container">
