@@ -75,8 +75,8 @@ function contactMe() {
                                     <form id="submit-form" action="">
                                         <div className="dual-input">
                                             <div className="first-name">
-                                                <label htmlFor="first">First Name</label>
-                                                <input type="text" id="first-name-input" name="firstname" placeholder="enter your first name" />
+                                                <label htmlFor="first">First Name*</label>
+                                                <input type="text" id="first-name-input" name="firstname" placeholder="enter your first name" required />
                                             </div>
                                             <div className="last-name">
                                                 <label htmlFor="last">Last Name</label>
@@ -84,17 +84,17 @@ function contactMe() {
                                             </div>
                                         </div>
                                         <div className="email">
-                                            <label htmlFor="email">Email</label>
-                                            <input type="email" id="email-input" name="email" placeholder="enter your address email" />
+                                            <label htmlFor="email">Email*</label>
+                                            <input type="email" id="email-input" name="email" placeholder="enter your address email" required />
                                         </div>
                                         <div className="dual-input">
                                             <div className="phone">
-                                                <label htmlFor="phone">Phone</label>
-                                                <input type="tel" id="phone-input" name="phone" placeholder="enter your phone number" />
+                                                <label htmlFor="phone">Phone*</label>
+                                                <input type="tel" id="phone-input" name="phone" placeholder="enter your phone number" required />
                                             </div>
                                             <div className="location">
-                                                <label htmlFor="location">Location</label>
-                                                <input type="text" id="location-input" name="location" placeholder="enter where are you from" />
+                                                <label htmlFor="location">Location*</label>
+                                                <input type="text" id="location-input" name="location" placeholder="enter where are you from" required />
                                             </div>
                                         </div>
                                         <div className="favourite-part">
@@ -102,8 +102,8 @@ function contactMe() {
                                             <textarea id="favourite-part-input" name="yourselves" placeholder="tell me about yourselves" />
                                         </div>
                                         <div className="about">
-                                            <label htmlFor="about">About Session</label>
-                                            <textarea id="about-input" name="about" placeholder="tell me which session or what kinda photo service are you looking for?" />
+                                            <label htmlFor="about">About Session*</label>
+                                            <textarea id="about-input" name="about" placeholder="tell me which session or what kinda photo service are you looking for?" required />
                                         </div>
                                         <div className="sub">
                                             <input type="submit" value="Send" onClick={(e) => submitForm()} />
