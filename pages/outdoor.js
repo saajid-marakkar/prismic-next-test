@@ -3,9 +3,6 @@ import Prismic from "prismic-javascript";
 import { Client } from "../prismic-configuration";
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import Footer from '../components/footer'
-
-
 
 export async function getStaticProps() {
 

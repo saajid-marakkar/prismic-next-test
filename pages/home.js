@@ -107,7 +107,7 @@ function Home({ image_links }) {
         }
         let nextImage = imagelinks[index]
         setImagesrc(nextImage)
-        
+
     }
     const touchStart = (event) => {
         setStartingX(0)
@@ -121,21 +121,21 @@ function Home({ image_links }) {
         var movex = event.touches[0].clientX
         setMovingX(movex)
         console.log(startingX)
-        console.log("movingX: ",movingX)
+        console.log("movingX: ", movingX)
         var movey = event.touches[0].clientY
         setMovingY(movey)
     }
     const touchEnd = () => {
-        if (startingX+30 < movingX){
+        if (startingX + 30 < movingX) {
             console.log("right")
             console.log(startingX)
             prevImage()
         }
-        else if (startingX-30 > movingX){
+        else if (startingX - 30 > movingX) {
             console.log("left")
             console.log(startingX)
             nextImage()
-            
+
         }
     }
 
@@ -148,7 +148,7 @@ function Home({ image_links }) {
                         <div className="gallery-container" >
                             <div className="text-center loader-container">
                                 <div>
-                                    <Spin indicator={antIcon} /> 
+                                    <Spin indicator={antIcon} />
                                 </div>
                                 <div>
                                     <h2>loading..</h2>
@@ -179,21 +179,21 @@ function Home({ image_links }) {
                                 </div>
                             ))}
                         </div>
-                        
+
                 }
             </div>
             <div className="modalp">
                 <div className="preview-container">
                     <div className="right" onClick={() => nextImage()} title="Next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className ="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                         </svg>
                     </div>
                     <div>
-                        <img src={imagesrc} className="full-img" onTouchStart = {() => touchStart(event)} onTouchMove={() => touchMove(event)} onTouchEnd={() => touchEnd()} />
+                        <img src={imagesrc} className="full-img" onTouchStart={() => touchStart(event)} onTouchMove={() => touchMove(event)} onTouchEnd={() => touchEnd()} />
                     </div>
                     <div className="left" onClick={() => prevImage()} title="Previous">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className ="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
                         </svg>
                     </div>

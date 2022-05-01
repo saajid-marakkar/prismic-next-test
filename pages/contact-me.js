@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import Head from 'next/head'
@@ -15,10 +14,10 @@ function contactMe() {
     });
     const [formStatus, setFormStatus] = useState("");
     const [isSubmitSucess, setIsSubmitSucess] = useState(false);
-    let submitMessageStyle1 = {
+    let submitMessageSuccessStyle = {
         color: "rgb(87 82 87)"
     };
-    let submitMessageStyle2 = {
+    let submitMessageErrorStyle = {
         color: "#FF0000"
     };
     const submitForm = (e) => {
@@ -37,6 +36,7 @@ function contactMe() {
                     //window.location.href="https://google.com"
                 },
                 error: function (err) {
+                    setIsSubmitSucess(false)
                     setFormStatus("Something went wrong, Try again")
 
                 }
@@ -108,7 +108,7 @@ function contactMe() {
                                         <div className="sub">
                                             <input type="submit" value="Send" onClick={(e) => submitForm()} />
                                         </div>
-                                        <div className="submit-status" style={isSubmitSucess ? submitMessageStyle1 : submitMessageStyle2} >{formStatus}</div>
+                                        <div className="submit-status" style={isSubmitSucess ? submitMessageSuccessStyle : submitMessageErrorStyle} >{formStatus}</div>
                                     </form>
                                 </div>
                             </div>
